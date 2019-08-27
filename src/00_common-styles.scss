@@ -1,9 +1,19 @@
 /******** COMMON STYLES FOR ALL DOCUMENT ********/
 @import "reset";
+@import "variables";
 @import "fonts/font-faces";
 .container {
   width: 1024px;
   margin: 0 auto;
 }
 
-@import "./footer/footer.scss";
+.btn-big {
+  font-size: $btnTextBig;
+  @include button('big', $aquamarine)
+}
+.btn-small {
+  font-size: $btnTextSmall;
+  @include button('small', $lightBlue)
+}
+
+@import "footer/footer";
