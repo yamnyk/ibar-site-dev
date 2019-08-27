@@ -15,6 +15,7 @@ const path = {
         fonts: 'dist/fonts'
     },
     src: {
+        ejs: 'src/**/*.ejs',
         html: 'src/**/*.html',
         js: 'src/**/*.js',
         style: 'src/**/*.scss',
@@ -73,6 +74,7 @@ const watcher = () => {
             baseDir: "./dist"
         }
     });
+    gulp.watch(path.src.ejs, htmlBuild).on('change', browserSync.reload);
     gulp.watch(path.src.html, htmlBuild).on('change', browserSync.reload);
     gulp.watch(path.src.style, scssBuild).on('change', browserSync.reload);
     gulp.watch(path.src.js, jsBuild).on('change', browserSync.reload);
