@@ -1,12 +1,15 @@
-@media (min-width: 320px) and (max-width: 580px) {
+@media (max-width: 580px) {
 
   .container {
     width: 100%;
     margin: 0 auto;
     background-color: #1b3e85;
     font-family: Arial, sans-serif;
+  }
+  .footer {
+    line-height: 1.25;
     &__address-block{
-      width: 203px;
+      width: 70%;
       padding-left: 20px;
       padding-bottom: 20px;
     }
@@ -15,35 +18,26 @@
       padding-left: 20px;
       color: #ffffff;
       font-size: 32px;
-      line-height: 39px;
     }
     &__address_name{
       color: #ffffff;
       font-size: 18px;
-      line-height: 22px;
     }
     &__address_first-line{
       color: #ffffff;
       font-size: 16px;
-      line-height: 22px;
     }
     &__address_second-line{
       color: #ffffff;
       font-size: 16px;
-      line-height: 22px;
-      margin-top: -15px;
     }
     &__address_phone{
       color: #ffffff;
       font-size: 16px;
-      line-height: 22px;
-      margin-top: -15px;
     }
     &__address_mail{
       color: #ffffff;
       font-size: 16px;
-      line-height: 22px;
-      margin-top: -15px;
     }
     &__social-button{
       width: 100%;
