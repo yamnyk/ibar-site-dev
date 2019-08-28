@@ -2,10 +2,46 @@
 @import "reset";
 @import "variables";
 @import "font-faces";
+
+*, *:before, *:after { box-sizing: border-box; }
+
+a { text-decoration: none; }
+
 .container {
-  width: 1024px;
-  margin: 0 auto;
+  padding: 0 20px;
 }
+@media screen and (min-width: $screen320) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: $screen580) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: $screen760) {
+  .container {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (min-width: $screen980) {
+  .container {
+    padding: 0 80px;
+  }
+}
+
+@media screen and (min-width: $screen1024) {
+  .container {
+    max-width: 1024px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
 
 .btn-big {
   font-size: $btnTextBig;
@@ -16,4 +52,13 @@
   @include button('small', $lightBlue)
 }
 
+.bnt-aquamarine {
+  background-color: $aquamarine;
+}
+
+.btn-lightBlue {
+  background-color: $lightBlue;
+}
+
+@import "header/1-header";
 @import "footer/footer";
