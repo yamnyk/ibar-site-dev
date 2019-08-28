@@ -1,15 +1,13 @@
-@media (max-width: 580px) {
-
   .container {
     padding-top: 39px;
     padding-bottom: 35px;
     padding-left: 20px;
     width: 100%;
     margin: 0 auto;
-    background-color: #1b3e85;
+    background-color: $darkBlue;
   }
   .footer {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.25;
     &__address-block-first{
       width: 70%;
@@ -21,12 +19,12 @@
     }
     &__headline{
       color: #ffffff;
-      font-size: 32px;
+      font-size: $h3;
       letter-spacing: 0.1em;
     }
     &__address_name{
       color: #ffffff;
-      font-size: 18px;
+      font-size: $p3;
       letter-spacing: 0.1em;
       padding-bottom: 25px;
     }
@@ -56,7 +54,7 @@
       padding-top: 30px;
       &_link{
         cursor: pointer;
-      };
+      }
       &_facebook{
         margin-right: 19px;
       }
@@ -65,4 +63,3 @@
       }
     }
   }
-}
