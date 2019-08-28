@@ -14,6 +14,15 @@ $p3: 18px;
 $btnTextBig: 20px;
 $btnTextSmall: 16px;
 
+/***** SCREEN_SIZES *****/
+// 320 => 580 => 760 => 920 => 1024
+$screen320    : 320px;
+$screen580    : 580px;
+$screen760    : 760px;
+$screen980    : 980px;
+$screen1024   : 1024px;
+
+
 /***** BTN_SIZES *****/
 @mixin button($size, $color) {
   border-radius: 9px;
@@ -26,7 +35,7 @@ $btnTextSmall: 16px;
     background-color: $color;
   }
   @if $size == 'small' {
-    padding: 10px 20px;
+    padding: 10px 14px;
     background-color: $color;
   }
 }
