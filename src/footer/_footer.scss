@@ -1,28 +1,25 @@
 @media (max-width: 580px) {
 
   .container {
+    padding-top: 39px;
+    padding-bottom: 35px;
+    padding-left: 20px;
     width: 100%;
     margin: 0 auto;
     background-color: #1b3e85;
-    //font-family: Arial, sans-serif;
   }
   .footer {
     font-family: sans-serif;
     line-height: 1.25;
     &__address-block-first{
       width: 70%;
-      padding-left: 20px;
       padding-bottom: 20px;
       padding-top: 25px;
     }
     &__address-block-second{
       width: 70%;
-      padding-left: 20px;
-      padding-bottom: 35px;
     }
     &__headline{
-      padding-top: 39px;
-      padding-left: 20px;
       color: #ffffff;
       font-family: ArialMT;
       font-weight: 400;
