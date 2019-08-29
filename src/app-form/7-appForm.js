@@ -17,7 +17,9 @@ form.addEventListener('submit', (e) => {
   url.searchParams.append('letter', letter.value);
 
   fetch(url).then((res) => {
-    console.log('Hello');
+    document.querySelector('.success-modal').style.display = 'flex';
+  }, (error) => {
+    console.dir(error)
   });
 
   name.value = '';

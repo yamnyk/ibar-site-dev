@@ -1,13 +1,18 @@
-<form action="" id="appForm" class="app-form">
-    <input type="text" id="formName" class="app-form__text-field" placeholder="Name" required>
-    <input type="number" id="formAge" class="app-form__text-field" placeholder="Age" required>
-    <input type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="tel." required>
-    <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="formMail" class="app-form__text-field" placeholder="Email address" required>
-    <select name="program" id="formProgram" class="app-form__text-field" required>
-        <option disabled selected value> -- select program -- </option>
-        <option value="frontend">FrontEnd</option>
-        <option value="backend">BackEnd</option>
-    </select>
-    <textarea id="formLetter" class="app-form__text-field" placeholder="Type motivation letter" required></textarea>
-    <input type="submit" value="Send">
-</form>
+<section>
+    <form action="" id="appForm" class="app-form">
+        <input type="text" id="formName" class="app-form__text-field" placeholder="Name" required>
+        <input type="number" id="formAge" class="app-form__text-field" placeholder="Age" required>
+        <input type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="tel." required>
+        <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="formMail" class="app-form__text-field" placeholder="Email address" required>
+        <select name="program" id="formProgram" class="app-form__text-field" required>
+            <option disabled selected value> -- select program -- </option>
+            <option value="frontend">FrontEnd</option>
+            <option value="backend">BackEnd</option>
+        </select>
+        <textarea id="formLetter" class="app-form__text-field" placeholder="Type motivation letter" required></textarea>
+        <input type="submit" value="Send">
+    </form>
+    <div class="success-modal">
+
+    </div>
+</section>
