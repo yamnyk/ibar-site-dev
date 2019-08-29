@@ -45,12 +45,17 @@
 
       & a {
         padding: 16px;
+        letter-spacing: 1px;
       }
 
       & a:hover {
         background-color: $aquamarine;
       }
 
+    }
+
+    & > a {
+      text-align: center;
     }
 
   }
@@ -61,6 +66,20 @@
     background-color: transparent;
     outline: none;
     border: none;
+    appearance: none;
+    width: 42px;
+    background-repeat: no-repeat;
+    background-position: 26px center;
+    padding-left: 2px;
+
+    &:focus {
+      background-image: url("../img/header/expand-less.svg");
+    }
+
+    &:not(:active) {
+      background-image: url("../img/header/expand-more.svg");
+    }
+
 
     & option {
       background-color: $lightBlue;
@@ -127,6 +146,14 @@
 
 }
 
+@media (min-width: $screen580) {
+  .navbar {
+    &-logo img {
+      width: 100px;
+    }
+  }
+}
+
 @media (min-width: $screen980) {
   .navbar {
 
@@ -137,6 +164,7 @@
     }
 
     &-logo img {
+      width: 110px;
     }
 
     &__menu {
@@ -148,7 +176,7 @@
 
         & a {
           padding: 4px 0;
-          margin: 16px;
+          margin: 10px;
           border-bottom: 2px solid transparent;
         }
 
