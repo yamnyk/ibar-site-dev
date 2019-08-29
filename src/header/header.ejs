@@ -1,9 +1,9 @@
 <section class="header">
     <nav class="navbar">
         <div class="navbar__content container">
-            <div class="navbar-logo">
-                <img src="../img/header/logo-bank.png" alt="">
-            </div>
+            <a class="navbar-logo" href="#">
+                <img src="../img/header/logo-bank.png" alt="logo-bank.png">
+            </a>
             <div class="navbar__menu">
                 <input type="checkbox" class="navbar__checkbox" id="navbar__checkbox">
                 <label for="navbar__checkbox" class="navbar__icon">
@@ -15,19 +15,24 @@
                     <a href="#">О проекте</a>
                     <a href="#">Направления</a>
                     <a href="#">Этапы поступления</a>
-                    <a href="#">Контакты</a>
+                    <a href="#contacts">Контакты</a>
                 </div>
 
                 <a class="btn-small bnt-aquamarine" href="#">Подать заявку</a>
-                <select name="navbar__lang-list" id="navbar__lang-list">
+                <select  class="navbar__lang-list" id="navbar__lang-list" name="lang">
                     <option value="ru">Ru</option>
+                    <option value="en">Uk</option>
                     <option value="en">En</option>
                 </select>
             </div>
         </div>
     </nav>
 
-    <div class="header">
-
+    <div id="home" class="home">
+        <div class="home-wrapper container">
+            <h1 class="home-title">Welcome!</h1>
+            <p class="home-subtitle">We will help you understand the world!</p>
+            <a class="application btn-big bnt-aquamarine" href="#">ПОДАТЬ ЗАЯВКУ</a>
+        </div>
     </div>
 </section>
