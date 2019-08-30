@@ -3,6 +3,8 @@
 @import "variables";
 @import "font-faces";
 
+html { scroll-behavior: smooth; }
+
 *, *:before, *:after { box-sizing: border-box; }
 
 a { text-decoration: none; }
