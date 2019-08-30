@@ -22,6 +22,8 @@ $screen760    : 760px;
 $screen980    : 980px;
 $screen1024   : 1024px;
 
+/***** NAVBAR_HEIGHT *****/
+$navbarHeight : 68px;
 
 /***** BTN_SIZES *****/
 @mixin button($size, $color) {
