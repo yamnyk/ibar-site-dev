@@ -72,6 +72,10 @@
     background-position: 26px center;
     padding-left: 2px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &:focus {
       background-image: url("../img/header/expand-less.svg");
     }
