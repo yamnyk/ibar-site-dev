@@ -1,0 +1,11 @@
+.app {
+  height: 800px;
+  &-wrapper {
+    background: linear-gradient(90deg,
+            rgb(128, 149, 195) 0%,
+            rgba(57,89,162,1) 15%,
+            rgba(57,89,162,1) 85%,
+            rgb(128, 149, 195) 100%);
+  }
+}
+

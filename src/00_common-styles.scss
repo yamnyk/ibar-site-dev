@@ -10,6 +10,31 @@ a { text-decoration: none; }
 .container {
   padding: 0 20px;
 }
+
+.btn-big {
+  font-size: $btnTextBig;
+  @include button('big', $aquamarine)
+}
+.btn-small {
+  font-size: $btnTextSmall;
+  @include button('small', $lightBlue)
+}
+
+.bnt-aquamarine {
+  background-color: $aquamarine;
+}
+
+.btn-lightBlue {
+  background-color: $lightBlue;
+}
+
+@import "header/1-header";
+@import "header/2-home";
+@import "app-form/appFrom";
+@import "footer/footer";
+
+/**** M E D I A  Q U E R I E S ****/
+
 @media screen and (min-width: $screen320) {
   .container {
     padding: 0 20px;
@@ -42,24 +67,4 @@ a { text-decoration: none; }
   }
 }
 
-
-.btn-big {
-  font-size: $btnTextBig;
-  @include button('big', $aquamarine)
-}
-.btn-small {
-  font-size: $btnTextSmall;
-  @include button('small', $lightBlue)
-}
-
-.bnt-aquamarine {
-  background-color: $aquamarine;
-}
-
-.btn-lightBlue {
-  background-color: $lightBlue;
-}
-
-@import "header/1-header";
-@import "header/2-home";
-@import "footer/footer";
+@import "app-form/appForm_media";
