@@ -12,7 +12,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: sans-serif;
     height: 100%;
   }
 
@@ -61,6 +60,7 @@
   }
 
   &__lang-list {
+    font-family: RoundedMplus1c, sans-serif;
     font-size: $btnTextSmall;
     color: white;
     background-color: transparent;

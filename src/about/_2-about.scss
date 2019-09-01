@@ -1,7 +1,6 @@
 .about {
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
 
   &-item {
 
@@ -10,12 +9,13 @@
       padding: 20px;
 
       &-title {
-        font-size: $h3;
+        font-size: $h2;
+        font-weight: 500;
       }
 
       &-splitter {
         border-top: 3px solid $aquamarine;
-        margin: 14px 0;
+        margin: 8px 0 14px;
       }
 
       &-text {
@@ -76,7 +76,7 @@
   }
 
   & span {
-    font-weight: bold;
+    font-weight: 300;
   }
 
 }
