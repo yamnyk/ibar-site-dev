@@ -4,16 +4,17 @@
   & > .container {
     padding: 0;
   }
-
   &__title{
     background-color: #ffffff;
     color: #000000;
     font-size: $h3;
+    text-align: center;
     font-family: Arial, sans-serif;
-    padding: 40px 20px 10px;
+    padding-top: 40px;
+    padding-bottom: 10px;
   }
   &__block{
-    padding: 0 20px;
+    padding: 0 20px;    
     margin-bottom: 20px;
     background-color: $milk;
     &_main-block{
@@ -23,13 +24,11 @@
       &_text{
         font-size: 18px;
         line-height: 1.22;
-        margin-top: 11px;
         font-family: Arial, sans-serif;
       }
       &_title{
-
         color: $darkBlue;
-        font-size: $p3;
+        font-size: 28px;
         text-align: left;
         padding-top: 5px;
         font-family: Arial, sans-serif;
@@ -38,6 +37,38 @@
           color: $darkBlue;
           font-size: 42px;
           font-family: Arial, sans-serif;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen980) {
+  .stages-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .stages__block{
+    width: 49%;
+    min-height: 466px;
+  }
+  .stages {
+    &__title {
+      font-size: 52px;
+      text-align: left;
+      margin-bottom: 22px;
+    }
+    &__block{
+      &_main-block{
+        &_text{
+          line-height: 1.35;
+          margin-left: 75px;
+          margin-top: 20px;
+        }
+        &_title{
+          font-size: 29px;
+          padding-bottom: 5px;
         }
       }
     }
