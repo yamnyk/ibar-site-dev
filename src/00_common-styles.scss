@@ -3,7 +3,10 @@
 @import "variables";
 @import "font-faces";
 
-html { scroll-behavior: smooth; }
+html {
+  font-family: RoundedMplus1c, sans-serif;
+  scroll-behavior: smooth;
+}
 
 *, *:before, *:after { box-sizing: border-box; }
 
