@@ -20,5 +20,8 @@
   "browserslist": [
     "> 0.2%",
     "last 100 versions"
-  ]
+  ],
+  "dependencies": {
+    "amocrm-js": "^1.0.17"
+  }
 }
