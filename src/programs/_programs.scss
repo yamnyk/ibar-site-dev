@@ -1,0 +1,49 @@
+.programs{
+  font-family: Arial, sans-serif;
+  &__img{
+    display: flex;
+    & img{
+      margin: auto;
+    }
+  }
+  &__title{
+    color: #000000;
+    font-size: 32px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  &__main-block{
+    background-color: $milk;
+    padding: 16px 0;
+    margin-bottom: 20px;
+    &_title{
+      color: $darkBlue;
+      font-size: 28px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid $aquamarine;
+    }
+    &_text{
+      color: #000000;
+      font-size: $p3;
+      line-height: 1.35;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      & p:nth-child(2){
+        margin-top: 10px;
+      }
+    }
+    &_button-big{
+      margin: auto;
+      padding: 20px 0 15px;
+      display: flex;
+      & a{
+        margin: auto;
+      }
+    }
+  }
+
+
+
+}
