@@ -20,6 +20,10 @@ a { text-decoration: none; }
   font-size: $btnTextBig;
   @include button('big', $aquamarine)
 }
+.btn-extra {
+  font-size: $btnTextBig;
+  @include button('extralarge', $aquamarine)
+}
 .btn-small {
   font-size: $btnTextSmall;
   @include button('small', $lightBlue)

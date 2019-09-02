@@ -21,13 +21,14 @@
             <label for="formProgram" class="app-form__text">
                 Направление обучения
                 <select name="program" id="formProgram" class="app-form__text-field" required>
-                    <option disabled selected value> -- select program -- </option>
+                    <option disabled selected value> Выберите программу </option>
                     <option value="frontend">FrontEnd</option>
                     <option value="backend">BackEnd</option>
                 </select>
             </label>
-            <textarea id="formLetter" class="app-form__text-field" placeholder="Type motivation letter" required></textarea>
-            <input type="submit" value="Send">
+            <textarea id="formLetter" class="app-form__text-field motivation-letter" placeholder="Расскажите о своём опыте или желании обучаться на программе.
+Почему среди прочих кандидатов мы должны выбрать именно вас?" required></textarea>
+            <input type="submit" value="Отправить" class="btn-extra">
         </form>
         <div class="success-modal">
 

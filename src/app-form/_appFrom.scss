@@ -1,5 +1,8 @@
 .app {
-  height: 800px;
+  &.container {
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
   &-wrapper {
     background: linear-gradient(90deg,
             rgb(128, 149, 195) 0%,
@@ -7,5 +10,59 @@
             rgba(57,89,162,1) 85%,
             rgb(128, 149, 195) 100%);
   }
+
+  &__title {
+    font-size: $h3;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      font-family: RoundedMplus1c, sans-serif;
+      font-size: $p3;
+      color: white;
+      margin-bottom: 20px;
+
+      &-field {
+        font-family: RoundedMplus1c, sans-serif;
+        font-size: 16px;
+        color: white;
+        outline: none;
+        background-color: transparent;
+        padding: 20px 15px 15px;
+        border: 1px solid $milk;
+        border-radius: 5px;
+        margin-top: 15px;
+
+        &::placeholder {
+          color: white;
+        }
+
+        & option {
+          background-color: $lightBlue;
+        }
+
+        & option:checked {
+          background-color: $aquamarine;
+        }
+      }
+    }
+
+    & .btn-extra {
+      align-self: center;
+    }
+  }
+}
+
+.motivation-letter {
+  resize: none;
+  height: 200px;
 }
 
