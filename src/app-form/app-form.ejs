@@ -2,31 +2,31 @@
     <div class="container app">
         <h2 class="app__title">Подать заявку</h2>
         <form action="" id="appForm" class="app-form">
-            <label for="formName" class="app-form__text">
+            <label for="formName" class="app-form__text app-form__text--half-width">
                 ФИО
-                <input type="text" id="formName" class="app-form__text-field" placeholder="Иванов Иван Иванович" required>
+                <input type="text" id="formName" class="app-form__text-field " placeholder="Иванов Иван Иванович" required>
             </label>
-            <label for="formAge" class="app-form__text">
+            <label for="formAge" class="app-form__text app-form__text--half-width">
                 Возраст
                 <input type="number" id="formAge" class="app-form__text-field" placeholder="укажите сколько вам полных лет" required>
             </label>
-            <label for="formPhone" class="app-form__text">
+            <label for="formPhone" class="app-form__text app-form__text--half-width">
                 Телефон
-                <input type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="tel." required>
+                <input type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="+900 00 000 00 00" required>
             </label>
-            <label for="formMail" class="app-form__text">
+            <label for="formMail" class="app-form__text app-form__text--half-width">
                 Email
                 <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="formMail" class="app-form__text-field" placeholder="Email address" required>
             </label>
-            <label for="formProgram" class="app-form__text app-form__text--arrow">
-                Направление обучения
+            <label for="formProgram" class="app-form__text app-form__text--arrow app-form__text--full-width">
+                Направление
                 <select name="program" id="formProgram" class="app-form__text-field" required>
                     <option disabled selected value> Выберите программу </option>
                     <option value="frontend">FrontEnd</option>
                     <option value="backend">BackEnd</option>
                 </select>
             </label>
-            <label for="formLetter" class="app-form__text">
+            <label for="formLetter" class="app-form__text app-form__text--full-width">
                 Мотивационное письмо
                 <textarea id="formLetter" class="app-form__text-field motivation-letter" placeholder="Расскажите о своём опыте или желании обучаться на программе.
 Почему среди прочих кандидатов мы должны выбрать именно вас?" required></textarea>
