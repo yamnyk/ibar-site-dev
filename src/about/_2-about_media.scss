@@ -3,12 +3,18 @@
 
     &-item {
 
+      &__img {
+        height: 100%;
+      }
+
       &__article {
         padding-left: 40px;
         padding-right: 40px;
       }
 
       &__image-box {
+        height: 500px;
+        object-fit: cover;
         padding-left: 40px;
         padding-right: 40px;
       }
