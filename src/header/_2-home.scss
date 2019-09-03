@@ -32,26 +32,3 @@
   }
 }
 
-@media (min-width: $screen980) {
-  .home {
-    background: url("../img/header/Students_foto_main_banner@3x.png") center no-repeat;
-    background-size: cover;
-    padding-bottom: 102px;
-
-    &-wrapper {
-
-    }
-
-    &-subtitle {
-      margin-bottom: 24px;
-    }
-
-    & .application {
-      display: block;
-    }
-  }
-
-
-
-}
-
