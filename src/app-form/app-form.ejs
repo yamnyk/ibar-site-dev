@@ -18,7 +18,7 @@
                 Email
                 <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="formMail" class="app-form__text-field" placeholder="Email address" required>
             </label>
-            <label for="formProgram" class="app-form__text">
+            <label for="formProgram" class="app-form__text app-form__text--arrow">
                 Направление обучения
                 <select name="program" id="formProgram" class="app-form__text-field" required>
                     <option disabled selected value> Выберите программу </option>
@@ -26,8 +26,11 @@
                     <option value="backend">BackEnd</option>
                 </select>
             </label>
-            <textarea id="formLetter" class="app-form__text-field motivation-letter" placeholder="Расскажите о своём опыте или желании обучаться на программе.
+            <label for="formLetter" class="app-form__text">
+                Мотивационное письмо
+                <textarea id="formLetter" class="app-form__text-field motivation-letter" placeholder="Расскажите о своём опыте или желании обучаться на программе.
 Почему среди прочих кандидатов мы должны выбрать именно вас?" required></textarea>
+            </label>
             <input type="submit" value="Отправить" class="btn-extra">
         </form>
         <div class="success-modal">

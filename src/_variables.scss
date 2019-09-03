@@ -29,6 +29,7 @@ $screen1024   : 1024px;
   border: none;
   outline: none;
   color: #fff;
+  appearance: none;
   @if $size == 'extralarge' {
     text-transform: uppercase;
     padding: 20px 35px;
