@@ -39,8 +39,11 @@ a { text-decoration: none; }
 
 @import "header/1-header";
 @import "header/2-home";
-@import "app-form/appFrom";
 @import "footer/footer";
+@import "stages/stages";
+@import "programs/programs";
+@import "app-form/appFrom";
+
 
 /**** M E D I A  Q U E R I E S ****/
 
@@ -77,3 +80,4 @@ a { text-decoration: none; }
 }
 
 @import "app-form/appForm_media";
+
