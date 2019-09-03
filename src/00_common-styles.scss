@@ -16,6 +16,37 @@ a { text-decoration: none; }
   padding: 0 20px;
 }
 
+.btn-big {
+  font-size: $btnTextBig;
+  @include button('big', $aquamarine)
+}
+.btn-extra {
+  font-size: $btnTextBig;
+  @include button('extralarge', $aquamarine)
+}
+.btn-small {
+  font-size: $btnTextSmall;
+  @include button('small', $lightBlue)
+}
+
+.bnt-aquamarine {
+  background-color: $aquamarine;
+}
+
+.btn-lightBlue {
+  background-color: $lightBlue;
+}
+
+@import "header/1-header";
+@import "header/2-home";
+@import "programs/programs";
+@import "stages/stages";
+@import "app-form/appFrom";
+@import "footer/footer";
+
+
+/**** M E D I A  Q U E R I E S ****/
+
 @media screen and (min-width: $screen320) {
   .container {
     padding: 0 20px;
@@ -48,29 +79,8 @@ a { text-decoration: none; }
   }
 }
 
-
-.btn-big {
-  font-size: $btnTextBig;
-  @include button('big', $aquamarine)
-}
-.btn-small {
-  font-size: $btnTextSmall;
-  @include button('small', $lightBlue)
-}
-
-.bnt-aquamarine {
-  background-color: $aquamarine;
-}
-
-.btn-lightBlue {
-  background-color: $lightBlue;
-}
-
-@import "header/1-0-header";
-@import "header/1-1-home";
-@import "about/2-about";
-@import "benefits/3-benefits";
-@import "footer/footer";
-@import "stages/stages";
-@import "programs/programs";
-
+@import "header/3-header__media";
+@import "programs/programs__media";
+@import "stages/stages__media";
+@import "app-form/appForm_media";
+@import "footer/footer__media";

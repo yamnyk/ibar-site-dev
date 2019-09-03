@@ -45,6 +45,11 @@
       color: #ffffff;
       font-size: 16px;
       letter-spacing: 0.07em;
+      text-decoration: none;
+
+      &:link {
+        color: #fff;
+      }
     }
     &__address_mail{
       color: #ffffff;
@@ -66,12 +71,3 @@
       }
     }
   }
-@media (min-width: $screen980) {
-  .footer-wrapper{
-    display: flex;
-    justify-content: space-between;
-  }
-  .footer__address-block-first, .footer__address-block-second{
-    width: 40%;
-  }
-}

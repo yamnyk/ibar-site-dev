@@ -31,9 +31,14 @@ $navbarHeight : 68px;
   border: none;
   outline: none;
   color: #fff;
+  appearance: none;
+  @if $size == 'extralarge' {
+    text-transform: uppercase;
+    padding: 20px 35px;
+    background-color: $color;
+  }
   @if $size == 'big' {
     padding: 20px 25px;
-    height: 61px;
     background-color: $color;
   }
   @if $size == 'small' {
