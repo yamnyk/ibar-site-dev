@@ -12,16 +12,23 @@
                     <div class="navbar__icon-stick navbar__icon-stick--bottom"></div>
                 </label>
                 <div class="navbar__menu-wrapper">
-                    <a href="#">О проекте</a>
-                    <a href="#">Направления</a>
-                    <a href="#">Этапы поступления</a>
+                    <a href="#about">О проекте</a>
+                    <div class="navbar__submenu">
+                        <a href="#programs">Направления</a>
+                        <div class="navbar__submenu-wrapper">
+                            <a href="#frontend">Frontend</a>
+                            <a href="#backend">Backend</a>
+                        </div>
+                    </div>
+
+                    <a href="#stages">Этапы поступления</a>
                     <a href="#contacts">Контакты</a>
                 </div>
 
                 <a class="btn-small bnt-aquamarine" href="#">Подать заявку</a>
                 <select  class="navbar__lang-list" id="navbar__lang-list" name="lang">
                     <option value="ru">Ru</option>
-                    <option value="en">Uk</option>
+                    <option value="az">Az</option>
                     <option value="en">En</option>
                 </select>
             </div>

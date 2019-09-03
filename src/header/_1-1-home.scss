@@ -2,7 +2,8 @@
   height: 100vh;
   background: url("../img/header/Students_foto_main_banner.png") center no-repeat;
   background-size: cover;
-
+  margin-bottom: $navbarHeight;
+  padding-bottom: 52px;
 
   &-wrapper {
     display: flex;
@@ -10,9 +11,7 @@
     align-items: center;
     justify-content: flex-end;
     height: 100%;
-    padding-bottom: 48px;
     color: white;
-    font-family: Arial, sans-serif;
     text-align: center;
   }
 

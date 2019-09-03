@@ -1,0 +1,85 @@
+.about {
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+
+    &__article {
+      background-color: $milk;
+      padding: 20px;
+
+      &-title {
+        font-size: $h2;
+        font-weight: 500;
+      }
+
+      &-splitter {
+        border-top: 3px solid $aquamarine;
+        margin: 8px 0 14px;
+      }
+
+      &-text {
+        font-size: $p3;
+        line-height: 1.22;
+      }
+
+    }
+
+    &__image-box {
+      display: inline-block;
+      width: 100%;
+      padding: 20px;
+    }
+
+    &__image {
+      height: 100vw;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+
+      &--1 {
+        background-image: url("../img/about/about_1.png");
+
+      }
+
+      &--2 {
+        background-image: url("../img/about/about_2.png");
+
+      }
+
+    }
+
+  }
+
+  &-sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 20px 32px;
+
+    &__title {
+      font-size: 28px;
+      color: $lightBlue;
+      margin-top: 12px;
+      margin-right: 16px;
+    }
+
+    &__sponsor-1 {
+      margin-top: 12px;
+    }
+
+    &__sponsor-2 {
+      margin-top: 12px;
+    }
+  }
+
+  & span {
+    font-weight: 300;
+  }
+
+}
+
+
+

@@ -37,16 +37,7 @@ a { text-decoration: none; }
   background-color: $lightBlue;
 }
 
-@import "header/1-header";
-@import "header/2-home";
-@import "programs/programs";
-@import "stages/stages";
-@import "app-form/appFrom";
-@import "footer/footer";
-
-
-/**** M E D I A  Q U E R I E S ****/
-
+/**** C L A S S  .container ****/
 @media screen and (min-width: $screen320) {
   .container {
     padding: 0 20px;
@@ -79,7 +70,21 @@ a { text-decoration: none; }
   }
 }
 
-@import "header/3-header__media";
+/**** M O B I L E   F I R S T ****/
+@import "header/1-0-header";
+@import "header/1-1-home";
+@import "about/2-about";
+@import "benefits/3-benefits";
+@import "programs/programs";
+@import "stages/stages";
+@import "app-form/appFrom";
+@import "footer/footer";
+
+/**** M E D I A  Q U E R I E S ****/
+@import "header/1-0-header_media";
+@import "header/1-1-home_media";
+@import "about/2-about_media";
+@import "benefits/3-benefits_media";
 @import "programs/programs__media";
 @import "stages/stages__media";
 @import "app-form/appForm_media";
