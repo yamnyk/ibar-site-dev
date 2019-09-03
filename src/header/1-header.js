@@ -1,16 +1,21 @@
 // ************************************************************************
-// Handle scrolling page
-
-
-
-
-
-// ************************************************************************
-
-
-
-
-
+// Handle Change Languages
+const langList = document.getElementById('navbar__lang-list');
+langList.addEventListener('change', () => {
+    switch (langList.value) {
+        case 'ru':
+            window.location = '/index.html';
+            break;
+        case 'az':
+            window.location = '/index_az.html';
+            break;
+        case 'en':
+            window.location = '/index_en.html';
+            break;
+        default:
+            console.log('Unknown language!');
+    }
+});
 
 // ************************************************************************
 // Handle burger menu
@@ -36,5 +41,4 @@ window.addEventListener('resize', () => {
         uncheckBurgerMenu();
     }
 });
-// ************************************************************************
 
