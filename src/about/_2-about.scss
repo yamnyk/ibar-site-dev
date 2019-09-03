@@ -31,26 +31,10 @@
       padding: 20px;
     }
 
-    &__image {
-      height: 100vw;
+    &__img {
       width: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-
-
-      &--1 {
-        background-image: url("../img/about/about_1.png");
-
-      }
-
-      &--2 {
-        background-image: url("../img/about/about_2.png");
-
-      }
-
+      object-fit: cover;
     }
-
   }
 
   &-sponsors {
