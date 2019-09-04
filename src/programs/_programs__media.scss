@@ -47,3 +47,11 @@
   }
 
 }
+
+@media (min-width: $screen1024) {
+  .programs {
+    &__title {
+      margin-left: 0;
+    }
+  }
+}
