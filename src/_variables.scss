@@ -8,6 +8,7 @@ $milk: #f7f7f7;
 $h1: 58px;
 $h2: 52px;
 $h3: 32px;
+$h4: 26px;
 $p1: 36px;
 $p2: 20px;
 $p3: 18px;
@@ -31,7 +32,9 @@ $navbarHeight : 68px;
   border: none;
   outline: none;
   color: #fff;
+  cursor: pointer;
   appearance: none;
+  
   @if $size == 'extralarge' {
     text-transform: uppercase;
     padding: 20px 35px;

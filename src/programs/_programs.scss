@@ -1,9 +1,14 @@
 .programs{
   font-family: Arial, sans-serif;
-  &__img{
-    display: flex;
+
+  & > .container {
+    padding: 0;
+  }
+  &__img-box{
+    margin-bottom: 20px;
     & img{
-      margin: auto;
+      width: 100%;
+      object-fit: cover;
     }
   }
   &__title{
@@ -11,12 +16,13 @@
     font-size: 32px;
     text-align: left;
     font-family: Arial, sans-serif;
-    padding-top: 40px;
-    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-left: 16px;
+    margin-bottom: 20px;
   }
   &__main-block{
     background-color: $milk;
-    padding: 16px 0;
+    padding: 16px 20px;
     margin-bottom: 20px;
     &_title{
       color: $darkBlue;
@@ -44,3 +50,4 @@
     }
   }
 }
+
