@@ -1,3 +1,4 @@
+//*** about ***//
 @media (min-width: $screen580) {
   .about {
 
@@ -109,5 +110,17 @@
       margin: 0 auto;
     }
 
+  }
+}
+
+//*** modal ***//
+@media (min-width: $screen1024) {
+  .modal {
+    &-window {
+
+      &__box {
+        padding: 72px 64px 48px;
+      }
+    }
   }
 }
