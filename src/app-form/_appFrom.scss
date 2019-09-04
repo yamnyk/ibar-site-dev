@@ -1,0 +1,74 @@
+.app {
+  &.container {
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+  &-wrapper {
+    background:  rgba(57,89,162,1) 85%,;
+  }
+
+  &__title {
+    font-size: $h3;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      font-family: RoundedMplus1c, sans-serif;
+      font-size: $p3;
+      color: white;
+      margin-bottom: 20px;
+
+      &--arrow::after {
+        content: '';
+        position: absolute;
+        right: 10px;
+        top: 60px;
+        border: 5px solid transparent;
+        border-top-color: $milk;
+      }
+
+      &-field {
+        font-family: RoundedMplus1c, sans-serif;
+        font-size: 16px;
+        color: white;
+        outline: none;
+        background-color: transparent;
+        padding: 20px 15px 15px;
+        border: 1px solid $milk;
+        border-radius: 5px;
+        margin-top: 15px;
+        appearance: none;
+
+        &::placeholder {
+          color: white;
+        }
+
+        & option {
+          background-color: $lightBlue;
+        }
+
+        & option:checked {
+          background-color: $aquamarine;
+        }
+      }
+    }
+
+    & .btn-extra {
+      align-self: center;
+    }
+  }
+}
+
+.motivation-letter {
+  resize: none;
+  height: 200px;
+}
