@@ -19,6 +19,14 @@ document.querySelector('.navbar__content').addEventListener('click',  function (
     }
 });
 
+// Listener on button
+document.querySelector('a.application').addEventListener('click',  function (e) {
+    e.preventDefault();
+    if (e.target.closest('A')) {
+        scrollToSection(document.getElementById(e.target.hash.slice(1)));
+    }
+});
+
 
 // ************************************************************************
 // Handle Change Languages
