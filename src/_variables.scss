@@ -8,6 +8,7 @@ $milk: #f7f7f7;
 $h1: 58px;
 $h2: 52px;
 $h3: 32px;
+$h4: 26px;
 $p1: 36px;
 $p2: 20px;
 $p3: 18px;
@@ -22,6 +23,8 @@ $screen760    : 760px;
 $screen980    : 980px;
 $screen1024   : 1024px;
 
+/***** NAVBAR_HEIGHT *****/
+$navbarHeight : 68px;
 
 /***** BTN_SIZES *****/
 @mixin button($size, $color) {
@@ -30,9 +33,15 @@ $screen1024   : 1024px;
   outline: none;
   color: #fff;
   cursor: pointer;
+  appearance: none;
+  
+  @if $size == 'extralarge' {
+    text-transform: uppercase;
+    padding: 20px 35px;
+    background-color: $color;
+  }
   @if $size == 'big' {
     padding: 20px 25px;
-    height: 61px;
     background-color: $color;
   }
   @if $size == 'small' {
