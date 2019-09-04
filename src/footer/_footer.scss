@@ -71,3 +71,12 @@
       }
     }
   }
+@media (min-width: $screen980) {
+  .footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__address-block-first, .footer__address-block-second{
+    width: 40%;
+  }
+}

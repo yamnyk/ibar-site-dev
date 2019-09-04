@@ -32,7 +32,9 @@ $navbarHeight : 68px;
   border: none;
   outline: none;
   color: #fff;
+  cursor: pointer;
   appearance: none;
+  
   @if $size == 'extralarge' {
     text-transform: uppercase;
     padding: 20px 35px;

@@ -1,5 +1,9 @@
 .stages{
   width: 100%;
+
+  & > .container {
+    padding: 0;
+  }
   &__title{
     background-color: #ffffff;
     color: #000000;

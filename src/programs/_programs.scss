@@ -1,11 +1,23 @@
 .programs{
   font-family: Arial, sans-serif;
-  &__img{
-    display: flex;
-    & img{
-      margin: auto;
-    }
+
+  & > .container {
+    padding: 0;
   }
+  &__img-front{
+    margin-bottom: 15px;
+    background-image: url("../img/programs/Frontend_photo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 257px;
+  }
+  &__img-back{
+    margin-bottom: 15px;
+    background-image: url("../img/programs/Backend_photo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 257px;
+}
   &__title{
     color: #000000;
     font-size: 32px;
@@ -17,6 +29,7 @@
   &__main-block{
     background-color: $milk;
     padding: 16px 0;
+
     margin-bottom: 20px;
     &_title{
       color: $darkBlue;
@@ -44,3 +57,4 @@
     }
   }
 }
+
