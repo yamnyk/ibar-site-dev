@@ -1,4 +1,26 @@
 // ************************************************************************
+// Handle smooth scrolling to section
+function scrollToSection(element) {
+    // Menu height correction in px
+    const menuHeight = 68;
+    window.scroll(
+      {
+          top: element.offsetTop - menuHeight,
+          left: 0,
+          behavior: 'smooth'
+      })
+}
+
+// Listener on menu item
+document.querySelector('.navbar__content').addEventListener('click',  function (e) {
+    e.preventDefault();
+    if (e.target.closest('A')) {
+        scrollToSection(document.getElementById(e.target.hash.slice(1)));
+    }
+});
+
+
+// ************************************************************************
 // Handle Change Languages
 const langList = document.getElementById('navbar__lang-list');
 langList.addEventListener('change', () => {
