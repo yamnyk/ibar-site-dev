@@ -1,3 +1,35 @@
-@media (min-width: $screen580) {
-  
+@media (min-width: $screen980) {
+  .programs {
+    &__title {
+      font-size: 52px;
+    }
+    &__img-front {
+      background-image: url("../img/programs/Frontend_photo@2x.png");
+      height: 466px;
+      width: 49%;
+    }
+    &__img-back {
+      background-image: url("../img/programs/Backend_photo@2x.png");
+      height: 466px;
+      width: 49%;
+    }
+    &__main-block {
+      width: 49%;
+      &_title{
+        font-size: 32px;
+      }
+    }
+  }
+  .programs-wrapper-front{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+  .programs-wrapper-back{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
 }
