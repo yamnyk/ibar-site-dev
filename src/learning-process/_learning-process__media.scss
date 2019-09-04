@@ -1,0 +1,30 @@
+@media (min-width: $screen760) {
+  .learning-process {
+    background: url("") no-repeat,
+    url("../img/learning/learning_graph_element.png") no-repeat,
+    linear-gradient(90deg,
+                    rgb(128, 149, 195) 0%,
+                    rgba(57, 89, 162, 1) 15%,
+                    rgba(57, 89, 162, 1) 85%,
+                    rgb(128, 149, 195) 100%);
+    background-repeat: no-repeat;
+    background-size: 15% 100%, 15% 100%, auto 100%;
+    background-position: -5% 0, 100% 0, 20% bottom;
+    .learning-wrapper {
+      display: flex;
+      & img {
+        object-fit: cover;
+      }
+    }
+    &_text-block-icons {
+
+      &_icons {
+        width: 104px;
+      }
+    }
+      &_block-img {
+        width: 80%;
+      }
+    }
+  }
+

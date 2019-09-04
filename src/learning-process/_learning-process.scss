@@ -1,9 +1,17 @@
-.learning-process{
+.learning-process {
   font-family: Arial, sans-serif;
-  background-image: url("../img/learning/BG_learning2x.png");
-  background-position: right;
-  background-size: cover;
+
+
+  background: url("") no-repeat,
+  url("../img/learning/learning_graph_element.png") no-repeat,
+  linear-gradient(90deg,
+                  rgb(128, 149, 195) 0%,
+                  rgba(57,89,162,1) 15%,
+                  rgba(57,89,162,1) 85%,
+                  rgb(128, 149, 195) 100%);
   background-repeat: no-repeat;
+  background-size: 15% 100%, 50% 100%, auto 100%;
+  background-position: -5% 0, 120% 0, 20% bottom;
   &_title{
     font-size: $h3;
     color: white;
@@ -23,7 +31,7 @@
   &_text-block-icons{
     display: flex;
     align-items: start;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     &_icons{
       width: 64px;
     }
@@ -45,8 +53,10 @@
   }
   &_block-img{
     display: flex;
+    justify-content: center;
     & img{
       margin: 0 auto;
+      width: 100%;
     }
   }
 }
