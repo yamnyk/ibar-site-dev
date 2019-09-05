@@ -1,4 +1,4 @@
-function slowScroll(triggerSymbol) {
+function slowScroll(triggerSymbol, headerClassName) {
   const allLinks = document.querySelectorAll('a');
 
   allLinks.forEach((link) => {
@@ -12,7 +12,7 @@ function slowScroll(triggerSymbol) {
 
   function slowScrolling(event) {
     const id = event.target.hash,
-      to = document.querySelector(id).offsetTop - 80;
+      to = document.querySelector(id).offsetTop - document.querySelector(`.${headerClassName}`).clientHeight - 10;
     window.scroll({
       top: to,
       left: 0,
@@ -21,4 +21,4 @@ function slowScroll(triggerSymbol) {
   }
 }
 
-slowScroll('#');
+slowScroll('#', 'navbar');
