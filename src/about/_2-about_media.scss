@@ -63,6 +63,9 @@
       &__article {
         width: calc(100% / 2 - 10px);
         padding: 28px;
+        &-title {
+          font-size: $h2;
+        }
       }
 
       .about-item--reverse-order &__article {
