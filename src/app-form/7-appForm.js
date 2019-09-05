@@ -6,6 +6,7 @@ form.addEventListener('submit', (e) => {
   const tel = document.querySelector('#formPhone');
   const email = document.querySelector('#formMail');
   const program = document.querySelector('#formProgram');
+  const schedule = document.querySelector('#formSchedule');
   const letter = document.querySelector('#formLetter');
 
   const url = new URL('https://script.google.com/macros/s/AKfycbzKBJ4yX6b8mwtzJmaPtGew0wOCthTeceoXNAidAJE53y_vsA/exec');
@@ -14,10 +15,16 @@ form.addEventListener('submit', (e) => {
   url.searchParams.append('tel', tel.value);
   url.searchParams.append('mail', email.value);
   url.searchParams.append('program', program.value);
+  url.searchParams.append('schedule', schedule.value);
   url.searchParams.append('letter', letter.value);
 
   fetch(url).then((res) => {
-    document.querySelector('.success-modal').style.display = 'flex';
+    const modal = document.querySelector('.app-modal');
+    modal.style.display = 'flex';
+
+    document.querySelector('.app-modal__msg > .btn-extra').onclick = (e) => {
+      document.querySelector('.app-modal').style.display = 'none';
+    }
   }, (error) => {
     console.dir(error)
   });
@@ -27,5 +34,6 @@ form.addEventListener('submit', (e) => {
   tel.value = '';
   email.value = '';
   program.value = '';
+  schedule.value = '';
   letter.value = '';
 });

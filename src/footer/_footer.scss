@@ -6,7 +6,6 @@
   padding-bottom: 35px;
 }
 .footer {
-  font-family: Arial, sans-serif;
   line-height: 1.25;
   background-color: $darkBlue;
   &__address-block-first{
@@ -17,6 +16,10 @@
   &__address-block-second{
     width: 70%;
     padding-top: 25px;
+    & img {
+      width: 100%;
+      filter: grayscale(1) invert(1);
+    }
   }
   &__headline{
     padding-top: 20px;
@@ -58,11 +61,10 @@
   }
   &__social-button{
     width: 100%;
-    height: 50px;
-    padding-top: 30px;
+    margin-top: 10px;
     &_link{
       cursor: pointer;
-    }
+        }
     &_facebook{
       margin-right: 19px;
     }

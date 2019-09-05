@@ -50,6 +50,11 @@
         }
       }
     }
+    &-modal {
+      &__msg {
+        max-width: 640px;
+      }
+    }
   }
 }
 

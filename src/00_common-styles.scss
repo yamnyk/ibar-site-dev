@@ -1,14 +1,24 @@
 /******** COMMON STYLES FOR ALL DOCUMENT ********/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic');
 @import "reset";
 @import "variables";
 @import "font-faces";
 
 html {
-  font-family: RoundedMplus1c, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
 }
 
-*, *:before, *:after { box-sizing: border-box; }
+*, *:before, *:after {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  display: none;
+}
 
 a { text-decoration: none; }
 

@@ -1,40 +1,56 @@
-<section class="app-wrapper">
+<section class="app-wrapper" id="appForm">
     <div class="container app">
         <h2 class="app__title">Подать заявку</h2>
-        <form action="" id="appForm" class="app-form">
+        <form action="" class="app-form">
             <label for="formName" class="app-form__text app-form__text--half-width">
                 ФИО
-                <input type="text" id="formName" class="app-form__text-field " placeholder="Иванов Иван Иванович" required>
+                <input autocomplete="off" type="text" id="formName" class="app-form__text-field " placeholder="Иванов Иван Иванович" required>
             </label>
             <label for="formAge" class="app-form__text app-form__text--half-width">
                 Возраст
-                <input type="number" id="formAge" class="app-form__text-field" placeholder="укажите сколько вам полных лет" required>
+                <input autocomplete="off" type="number" min='0' id="formAge" class="app-form__text-field" placeholder="Укажите сколько вам полных лет" required>
             </label>
             <label for="formPhone" class="app-form__text app-form__text--half-width">
                 Телефон
-                <input type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="+900 00 000 00 00" required>
+                <input autocomplete="off" type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="+ 994 00 000 00 00" required>
             </label>
             <label for="formMail" class="app-form__text app-form__text--half-width">
                 Email
-                <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="formMail" class="app-form__text-field" placeholder="Email address" required>
+                <input autocomplete="off" type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="formMail" class="app-form__text-field" placeholder="Email address" required>
             </label>
             <label for="formProgram" class="app-form__text app-form__text--arrow app-form__text--full-width">
                 Направление
-                <select name="program" id="formProgram" class="app-form__text-field" required>
+                <select autocomplete="off" name="program" id="formProgram" class="app-form__text-field" required>
                     <option disabled selected value> Выберите программу </option>
                     <option value="frontend">FrontEnd</option>
                     <option value="backend">BackEnd</option>
                 </select>
             </label>
+            <label for="formSchedule" class="app-form__text app-form__text--arrow app-form__text--full-width">
+                График
+                <select autocomplete="off" name="program" id="formSchedule" class="app-form__text-field" required>
+                    <option disabled selected value> Выберите график </option>
+                    <option value="morning">Утренний</option>
+                    <option value="evening">Вечерний</option>
+                </select>
+<!--                <span class="app-form__text-field&#45;&#45;note">gogi</span>-->
+            </label>
             <label for="formLetter" class="app-form__text app-form__text--full-width">
                 Мотивационное письмо
-                <textarea id="formLetter" class="app-form__text-field motivation-letter" placeholder="Расскажите о своём опыте или желании обучаться на программе.
-Почему среди прочих кандидатов мы должны выбрать именно вас?" required></textarea>
+                    <textarea autocomplete="off" id="formLetter" class="app-form__text-field motivation-letter" placeholder="Расскажите о своём опыте или желании обучаться на программе. Почему среди прочих кандидатов мы должны выбрать именно вас?" required></textarea>
+            </label>
+            <label for="personalData" class="app-form__data">
+                <input required checked type="checkbox" id="personalData">
+                <span class="app-form__data--check"></span>
+                <span>Даю согласие на обработку персональных данных</span>
             </label>
             <input type="submit" value="Отправить" class="btn-extra">
         </form>
-        <div class="success-modal">
-
+    </div>
+    <div class="app-modal">
+        <div class="app-modal__msg">
+            <p class="app-modal__highlight">Ваша заявка отправлена! Наши менеджеры свяжутся с Вами после её обработки.</p>
+            <button class="btn-extra">Ok</button>
         </div>
     </div>
 </section>

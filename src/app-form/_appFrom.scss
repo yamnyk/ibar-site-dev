@@ -22,7 +22,6 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      font-family: RoundedMplus1c, sans-serif;
       font-size: $p3;
       color: white;
       margin-bottom: 20px;
@@ -37,16 +36,26 @@
       }
 
       &-field {
-        font-family: RoundedMplus1c, sans-serif;
         font-size: 16px;
         color: white;
         outline: none;
-        background-color: transparent;
+        background-color: $lightBlue;
         padding: 20px 15px 15px;
         border: 1px solid $milk;
         border-radius: 5px;
         margin-top: 15px;
         appearance: none;
+
+        //&--note {
+        //  position: absolute;
+        //  color: $milk;
+        //  bottom: -20px;
+        //  right: 0;
+        //  font-size: 12px;
+        //  &::before {
+        //    content: '* ';
+        //  }
+        //}
 
         &::placeholder {
           color: white;
@@ -62,8 +71,83 @@
       }
     }
 
+    &__data {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      color: $milk;
+
+      &--check {
+        position: relative;
+        width: 23px;
+        height: 23px;
+        background-color: $milk;
+        border-radius: 3px;
+        margin-right: 10px;
+        &::after {
+          content: '';
+          display: none;
+          position: absolute;
+          left: 5px;
+          bottom: 5px;
+          width: 12px;
+          height: 20px;
+          border: 2px solid $darkBlue;
+          border-left-color: transparent;
+          border-top-color: transparent;
+          transform: rotate(45deg);
+          transition: opacity 0.3s ease;
+        }
+      }
+
+      & input[type=checkbox] {
+        position: absolute;
+        //display: none;
+        opacity: 0;
+        z-index: 0;
+        appearance: none;
+        outline: none;
+
+        &:checked ~ .app-form__data--check:after{
+          display: block;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  &-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity 0.4s ease;
+
+    &__msg {
+      transform: scale(0.75);
+      max-width: 480px;
+      text-align: center;
+      border-radius: 5px;
+      padding: 100px 25px 40px ;
+      background-color: $milk;
+      margin: 0 auto;
+    }
+
+    &__highlight {
+      font-size: $h3;
+      color: $darkBlue;
+      margin: 0 auto 50px auto;
+    }
+
     & .btn-extra {
-      align-self: center;
+      padding-left: 75px;
+      padding-right: 75px;
     }
   }
 }
