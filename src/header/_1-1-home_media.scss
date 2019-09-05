@@ -1,10 +1,33 @@
+@media (min-width: $screen580) {
+  .home {
+    &-info {
+      &__wrapper {
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+      &__item {
+        width: calc(100% / 2 - 20px);
+      }
+    }
+  }
+}
+
 @media (min-width: $screen980) {
   .home {
     background-size: cover;
     padding-bottom: 102px;
 
+    &-info {
+      &__wrapper {
+        justify-content: space-evenly;
+      }
+      &__item {
+        width: auto;
+      }
+    }
+
     &--frontend {
-      background-position: center -30px;
+      background-position: center;
     }
 
     &-wrapper {
