@@ -22,6 +22,10 @@
       &-text {
         font-size: $p3;
         line-height: 1.22;
+
+        & > p {
+          margin-top: 20px;
+        }
       }
 
     }
@@ -71,7 +75,9 @@
   & span {
     font-weight: 300;
   }
-
+  &--frontend {
+    padding-top: 55px;
+  }
 }
 
 //*** modal ***//
