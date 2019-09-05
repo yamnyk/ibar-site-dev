@@ -21,4 +21,16 @@ function slowScroll(triggerSymbol, headerClassName) {
   }
 }
 
+function changeNavLinks() {
+  if(document.location.pathname !== '/') {
+    document.querySelectorAll('a').forEach((link) => {
+      if(link.hash[0] === '#') {
+        link.href = `${document.location.origin}/${link.hash}`;
+      }
+    })
+  }
+}
+
+
+changeNavLinks();
 slowScroll('#', 'navbar');
