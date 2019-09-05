@@ -5,6 +5,11 @@
   margin-bottom: $navbarHeight;
   padding-bottom: 52px;
 
+  &--frontend {
+    background: url("../img/header/frontend/frontend-bg.png") -250px -15px no-repeat;
+    background-size: cover;
+  }
+
   &-wrapper {
     display: flex;
     flex-direction: column;
@@ -28,6 +33,10 @@
 
   & .application {
     display: none;
+  }
+
+  &-mb70 {
+    margin-bottom: 70px;
   }
 }
 
