@@ -1,7 +1,58 @@
-function toogle(e) {
-    let elems = document.getElementsByClassName('faq-header-title');
-    for (let i = 0; i < elems.length; i += 1) {
-        elems[i].childNodes[3].style.display = 'none';
+let accordion = (function (element) {
+
+    let _getItem = function (elements, className) { // функция для получения элемента с указанным классом
+        let element = undefined;
+        elements.forEach(function (item) {
+            if (item.classList.contains(className)) {
+                element = item;
+            }
+        });
+        return element;
+    };
+
+    return function () {
+        let _mainElement = {}, // .accordion
+            _items = {}, // .accordion-item
+            _contents = {}; // .accordion-item-content
+
+
+        let _actionClick = function (e) {
+                if (!e.target.classList.contains('accordion-item-header')) { // прекращаем выполнение функции если кликнули не по заголовку
+                    return;
+                }
+                e.preventDefault();   // Отменям стандартное действие
+                // получаем необходимые данные
+                let header = e.target,
+                    item = header.parentElement,
+                    itemActive = _getItem(_items, 'show');
+
+                if (itemActive === undefined) { // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+                    item.classList.add('show');
+                } else {
+                    // удаляем класс show у ткущего элемента
+                    itemActive.classList.remove('show');
+                    // если следующая вкладка не равна активной
+                    if (itemActive !== item) {
+                        // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+                        item.classList.add('show');
+                    }
+                }
+            },
+            _setupListeners = function () {
+                // добавим к элементу аккордиона обработчик события click
+                _mainElement.addEventListener('click', _actionClick);
+            };
+
+        return {
+            init: function (element) {
+                _mainElement = (typeof element === 'string' ? document.querySelector(element) : element);
+                _items = _mainElement.querySelectorAll('.accordion-item');
+                _setupListeners();
+            }
+        }
+
     }
-    e.childNodes[3].style.display = 'block';
-}
+})();
+
+let accordion1 = accordion();
+accordion1.init('#accordion');
