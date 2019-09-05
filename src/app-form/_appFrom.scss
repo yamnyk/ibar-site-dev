@@ -74,7 +74,51 @@
     & .btn-extra {
       align-self: center;
     }
+
+    &__data {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      color: $milk;
+
+      &--check {
+        position: relative;
+        width: 23px;
+        height: 23px;
+        background-color: $milk;
+        border-radius: 3px;
+        margin-right: 10px;
+        &::after {
+          content: '';
+          display: none;
+          position: absolute;
+          left: 5px;
+          bottom: 5px;
+          width: 12px;
+          height: 20px;
+          border: 2px solid $darkBlue;
+          border-left-color: transparent;
+          border-top-color: transparent;
+          transform: rotate(45deg);
+          transition: opacity 0.3s ease;
+        }
+      }
+
+      & input[type=checkbox] {
+        position: absolute;
+        display: none;
+        appearance: none;
+        outline: none;
+
+        &:checked ~ .app-form__data--check:after{
+          display: block;
+          //background-color: red;
+        }
+      }
+    }
   }
+
   &-modal {
     display: none;
     justify-content: center;

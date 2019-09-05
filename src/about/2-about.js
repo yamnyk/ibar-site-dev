@@ -2,18 +2,21 @@
 //  about
 // ************************************************************************
 
-// show sponsor 1
 const sponsor1 = document.querySelector('.about-sponsors__sponsor-1');
-sponsor1.addEventListener('click', () => {
-    const modalWindowBank = document.getElementById('modal-bank');
-    modalWindowBank.style.visibility = 'visible';
-});
-// show sponsor 2
 const sponsor2 = document.querySelector('.about-sponsors__sponsor-2');
-sponsor2.addEventListener('click', () => {
-    const modalWindowDanit = document.getElementById('modal-danit');
-    modalWindowDanit.style.visibility = 'visible';
-});
+
+if(sponsor1) {
+    sponsor1.addEventListener('click', () => {
+        const modalWindowBank = document.getElementById('modal-bank');
+        modalWindowBank.style.visibility = 'visible';
+    });
+}
+if(sponsor2) {
+    sponsor2.addEventListener('click', () => {
+        const modalWindowDanit = document.getElementById('modal-danit');
+        modalWindowDanit.style.visibility = 'visible';
+    });
+}
 // hide any of show modal window
 document.querySelectorAll('.modal-window__box .modal-btn-close').forEach((btn) => {
     btn.addEventListener('click', (e) => {
