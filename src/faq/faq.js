@@ -1,6 +1,6 @@
 let accordion = (function (element) {
 
-    let _getItem = function (elements, className) { // функция для получения элемента с указанным классом
+    let _getItem = function (elements, className) {
         let element = undefined;
         elements.forEach(function (item) {
             if (item.classList.contains(className)) {
@@ -11,35 +11,33 @@ let accordion = (function (element) {
     };
 
     return function () {
-        let _mainElement = {}, // .accordion
-            _items = {}, // .accordion-item
-            _contents = {}; // .accordion-item-content
+        let _mainElement = {},
+            _items = {},
+            _contents = {};
 
 
         let _actionClick = function (e) {
-                if (!e.target.classList.contains('accordion-item-header')) { // прекращаем выполнение функции если кликнули не по заголовку
+                if (!e.target.classList.contains('accordion-item-header')) {
                     return;
                 }
-                e.preventDefault();   // Отменям стандартное действие
-                // получаем необходимые данные
+                e.preventDefault();
                 let header = e.target,
                     item = header.parentElement,
                     itemActive = _getItem(_items, 'show');
 
-                if (itemActive === undefined) { // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+                if (itemActive === undefined) {
                     item.classList.add('show');
                 } else {
-                    // удаляем класс show у ткущего элемента
+
                     itemActive.classList.remove('show');
-                    // если следующая вкладка не равна активной
+
                     if (itemActive !== item) {
-                        // добавляем класс show к элементу (в зависимости от выбранного заголовка)
                         item.classList.add('show');
                     }
                 }
             },
             _setupListeners = function () {
-                // добавим к элементу аккордиона обработчик события click
+
                 _mainElement.addEventListener('click', _actionClick);
             };
 
