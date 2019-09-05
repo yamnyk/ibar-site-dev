@@ -25,21 +25,20 @@ function manageNavLinks() {
   if(document.location.pathname !== '/') {
     const nav = document.querySelector('.navbar__menu-wrapper');
     const navHandle = (e) => {
-      e.preventDefault();
-      window.open(`${document.location.origin}/${e.target.hash}`, '_self')
+      if(e.target.hash !== '#contacts' && e.target.hash !== 'appForm') {
+        e.preventDefault();
+        window.open(`${document.location.origin}/${e.target.hash}`, '_self')
+      } else {
+        window.scroll({
+          top: document.querySelector(e.target.hash).offsetTop,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
     };
-    nav.addEventListener('click', (e) => {
-      e.preventDefault();
-      navHandle(e)
-    });
-    nav.addEventListener('touchstart', (e) => {
-      e.preventDefault();
-      navHandle(e)
-    });
-    nav.addEventListener('mousedown', (e) => {
-      e.preventDefault();
-      navHandle(e)
-    });
+    nav.addEventListener('click', navHandle);
+    nav.addEventListener('touchstart', navHandle);
+    nav.addEventListener('mousedown', navHandle);
   }
 }
 
