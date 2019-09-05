@@ -1,6 +1,5 @@
 .learning-process {
   margin-top: 80px;
-  font-family: Arial, sans-serif;
   background:
   url("../img/learning/learning_graph_element.png") no-repeat,
   url("../img/learning/learning_graph_element.png") no-repeat,
@@ -54,6 +53,7 @@
   &_block-img{
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     & img{
       margin: 0 auto;
       width: 100%;

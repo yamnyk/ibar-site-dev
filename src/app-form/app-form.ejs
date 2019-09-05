@@ -8,11 +8,11 @@
             </label>
             <label for="formAge" class="app-form__text app-form__text--half-width">
                 Возраст
-                <input type="number" id="formAge" class="app-form__text-field" placeholder="укажите сколько вам полных лет" required>
+                <input type="number" min='0' id="formAge" class="app-form__text-field" placeholder="Укажите сколько вам полных лет" required>
             </label>
             <label for="formPhone" class="app-form__text app-form__text--half-width">
                 Телефон
-                <input type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="+900 00 000 00 00" required>
+                <input type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="00994 00 000 00 00" required>
             </label>
             <label for="formMail" class="app-form__text app-form__text--half-width">
                 Email
@@ -35,6 +35,12 @@
         </form>
         <div class="success-modal">
 
+        </div>
+    </div>
+    <div class="app-modal">
+        <div class="app-modal__msg">
+            <p class="app-modal__highlight">Ваша заявка отправлена! Наши менеджеры свяжутся с Вами после её обработки.</p>
+            <button class="btn-extra">Ok</button>
         </div>
     </div>
 </section>

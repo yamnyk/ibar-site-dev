@@ -17,7 +17,12 @@ form.addEventListener('submit', (e) => {
   url.searchParams.append('letter', letter.value);
 
   fetch(url).then((res) => {
-    document.querySelector('.success-modal').style.display = 'flex';
+    const modal = document.querySelector('.app-modal');
+    modal.style.display = 'flex';
+
+    document.querySelector('.app-modal__msg > .btn-extra').onclick = (e) => {
+      document.querySelector('.app-modal').style.display = 'none';
+    }
   }, (error) => {
     console.dir(error)
   });

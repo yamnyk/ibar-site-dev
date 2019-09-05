@@ -1,3 +1,11 @@
+@media (min-width: 360px) {
+  .navbar {
+    &-logo img {
+      transform: scale(1.5);
+    }
+  }
+}
+
 @media (min-width: $screen580) {
   .navbar {
     &-logo img {
@@ -20,6 +28,7 @@
     }
 
     &__menu {
+      font-size: 14px;
 
       &-wrapper {
         position: static;
@@ -83,4 +92,12 @@
 
   }
 
+}
+
+@media (min-width: $screen1024) {
+  .navbar {
+    &__menu {
+      font-size: inherit;
+    }
+  }
 }
