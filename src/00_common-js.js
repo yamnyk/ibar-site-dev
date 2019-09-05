@@ -21,16 +21,27 @@ function slowScroll(triggerSymbol, headerClassName) {
   }
 }
 
-function changeNavLinks() {
+function manageNavLinks() {
   if(document.location.pathname !== '/') {
-    document.querySelectorAll('a').forEach((link) => {
-      if(link.hash[0] === '#') {
-        link.href = `${document.location.origin}/${link.hash}`;
-      }
-    })
+    const nav = document.querySelector('.navbar__menu-wrapper');
+    const navHandle = (e) => {
+      e.preventDefault();
+      window.open(`${document.location.origin}/${e.target.hash}`, '_self')
+    };
+    nav.addEventListener('click', (e) => {
+      e.preventDefault();
+      navHandle(e)
+    });
+    nav.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      navHandle(e)
+    });
+    nav.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      navHandle(e)
+    });
   }
 }
 
-
-changeNavLinks();
+manageNavLinks();
 slowScroll('#', 'navbar');
