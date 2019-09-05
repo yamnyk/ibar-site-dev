@@ -6,6 +6,7 @@ form.addEventListener('submit', (e) => {
   const tel = document.querySelector('#formPhone');
   const email = document.querySelector('#formMail');
   const program = document.querySelector('#formProgram');
+  const schedule = document.querySelector('#formSchedule');
   const letter = document.querySelector('#formLetter');
 
   const url = new URL('https://script.google.com/macros/s/AKfycbzKBJ4yX6b8mwtzJmaPtGew0wOCthTeceoXNAidAJE53y_vsA/exec');
@@ -14,6 +15,7 @@ form.addEventListener('submit', (e) => {
   url.searchParams.append('tel', tel.value);
   url.searchParams.append('mail', email.value);
   url.searchParams.append('program', program.value);
+  url.searchParams.append('schedule', schedule.value);
   url.searchParams.append('letter', letter.value);
 
   fetch(url).then((res) => {
@@ -32,5 +34,6 @@ form.addEventListener('submit', (e) => {
   tel.value = '';
   email.value = '';
   program.value = '';
+  schedule.value = '';
   letter.value = '';
 });

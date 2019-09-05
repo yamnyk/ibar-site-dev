@@ -39,12 +39,23 @@
         font-size: 16px;
         color: white;
         outline: none;
-        background-color: transparent;
+        background-color: $lightBlue;
         padding: 20px 15px 15px;
         border: 1px solid $milk;
         border-radius: 5px;
         margin-top: 15px;
         appearance: none;
+
+        //&--note {
+        //  position: absolute;
+        //  color: $milk;
+        //  bottom: -20px;
+        //  right: 0;
+        //  font-size: 12px;
+        //  &::before {
+        //    content: '* ';
+        //  }
+        //}
 
         &::placeholder {
           color: white;

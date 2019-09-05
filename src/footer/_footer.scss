@@ -12,6 +12,11 @@
     width: 70%;
     padding-bottom: 20px;
     padding-top: 25px;
+
+    & > img {
+      margin-top: 20px;
+      filter: grayscale(1) invert(1);
+    }
   }
   &__address-block-second{
     width: 70%;
@@ -57,11 +62,10 @@
   }
   &__social-button{
     width: 100%;
-    height: 50px;
-    padding-top: 30px;
+    margin-top: 10px;
     &_link{
       cursor: pointer;
-    }
+        }
     &_facebook{
       margin-right: 19px;
     }
