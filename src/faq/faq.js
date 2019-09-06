@@ -42,10 +42,14 @@ let accordion = (function (element) {
             };
 
         return {
-            init: function (element) {
-                _mainElement = (typeof element === 'string' ? document.querySelector(element) : element);
-                _items = _mainElement.querySelectorAll('.accordion-item');
-                _setupListeners();
+            init: function (element = {}) {
+                try {
+                    _mainElement = (typeof element === 'string' ? document.querySelector(element) : element);
+                    _items = _mainElement.querySelectorAll('.accordion-item');
+                    _setupListeners();
+                } catch (e) {
+
+                }
             }
         }
 
