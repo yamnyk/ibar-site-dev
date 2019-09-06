@@ -4,11 +4,11 @@
         <form action="" class="app-form">
             <label for="formName" class="app-form__text app-form__text--half-width">
                 Ad, Soyad
-                <input autocomplete="off" type="text" id="formName" class="app-form__text-field " placeholder="Иванов Иван Иванович" required>
+                <input autocomplete="off" type="text" id="formName" class="app-form__text-field " placeholder="A.S.A. Məmmədov Məmməd Məmməd oğlu" required>
             </label>
             <label for="formAge" class="app-form__text app-form__text--half-width">
                 Yaş
-                <input autocomplete="off" type="number" min='0' id="formAge" class="app-form__text-field" placeholder="Укажите сколько вам полных лет" required>
+                <input autocomplete="off" type="number" min='0' id="formAge" class="app-form__text-field" placeholder="Yaşınızı göstərin" required>
             </label>
             <label for="formPhone" class="app-form__text app-form__text--half-width">
                 Telefon
@@ -19,38 +19,37 @@
                 <input autocomplete="off" type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="formMail" class="app-form__text-field" placeholder="Email address" required>
             </label>
             <label for="formProgram" class="app-form__text app-form__text--arrow app-form__text--full-width">
-                Направление
+                Tədris istiqaməti
                 <select autocomplete="off" name="program" id="formProgram" class="app-form__text-field" required>
-                    <option disabled selected value> Выберите программу </option>
+                    <option disabled selected value> İstiqaməti seçin </option>
                     <option value="frontend">FrontEnd</option>
                     <option value="backend">BackEnd</option>
                 </select>
             </label>
             <label for="formSchedule" class="app-form__text app-form__text--arrow app-form__text--full-width">
-                График
+                Qrafik
                 <select autocomplete="off" name="program" id="formSchedule" class="app-form__text-field" required>
-                    <option disabled selected value> Выберите график </option>
-                    <option value="morning">Утренний</option>
-                    <option value="evening">Вечерний</option>
+                    <option disabled selected value> Qrafiki seçin </option>
+                    <option value="morning">Səhər</option>
+                    <option value="evening">Axşam</option>
                 </select>
             </label>
             <p class="app-form__text-field--note">IBA Tech Akademiyası qrafik və dərs cədvəlində dəyişiklik etmək hüququna malikdir</p>
             <label for="formLetter" class="app-form__text app-form__text--full-width">
-                Sullara cavablar
-                <textarea autocomplete="off" id="formLetter" class="app-form__text-field motivation-letter" placeholder="Öz təcrübəniz və təhsil proqramında iştirak arzunuz haqqında bizə yazın. Çoxsaylı namizədlər arasından niyə məhz sizi seçməliyik?" required></textarea>
+                Motivasiya məktubu
+                <textarea autocomplete="off" id="formLetter" class="app-form__text-field motivation-letter" placeholder="Öz təcrübəniz, yaxud bu proqram üzrə təhsil arzunuz haqqında yazın. Çoxsaylı namizədlər arasından niyə məhz Sizi seçməliyik?" required></textarea>
             </label>
             <label for="personalData" class="app-form__data">
                 <input required checked type="checkbox" id="personalData">
                 <span class="app-form__data--check"></span>
                 <span>Fərdi məlumatlarımın emalına icazə verirəm</span>
             </label>
-            <input type="submit" value="Отправить" class="btn-extra">
+            <input type="submit" value="Göndər" class="btn-extra">
         </form>
     </div>
     <div class="app-modal">
         <div class="app-modal__msg">
-            <p class="app-modal__highlight">Ərizəniz göndərildi! Məlumatlarınız yoxlandıqdan sonra əməkdaşlarımız Sizinlə əlaqə
-                saxlayacaqlar.</p>
+            <p class="app-modal__highlight">Ərizəniz göndərildi! Məlumatlarınız yoxlandıqdan sonra əməkdaşlarımız Sizinlə əlaqə saxlayacaqlar</p>
             <button class="btn-extra">Ok</button>
         </div>
     </div>
