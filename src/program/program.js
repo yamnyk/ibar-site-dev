@@ -7,13 +7,14 @@ function toggleFullProgram() {
 }
 (function () {
   const showMoreBtn = document.querySelector('.program__show-more-btn') || document.createElement('div');
+  const showMore = document.querySelector('.program__show-more') || document.createElement('div');
   toggleFullProgram();
-  document.querySelector('.program__show-more').addEventListener('mousedown', (e) => {
+  showMore.addEventListener('mousedown', (e) => {
     e.preventDefault();
     toggleFullProgram();
     showMoreBtn.classList.toggle('program__show-more-btn--activated')
   });
-  document.querySelector('.program__show-more').addEventListener('touchstart', (e) => {
+  showMore.addEventListener('touchstart', (e) => {
     e.preventDefault();
     toggleFullProgram();
     showMoreBtn.classList.toggle('program__show-more-btn--activated')
