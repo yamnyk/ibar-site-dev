@@ -8,9 +8,10 @@
     &__module {
       width: calc(100% / 2 + 15%);
       &-title {
+        width: calc(100% / 2 - 15%);
         text-align: right;
         position: absolute;
-        left: -280px;
+        left: -200px;
       }
     }
   }
