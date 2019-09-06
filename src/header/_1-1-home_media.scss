@@ -22,7 +22,7 @@
         justify-content: space-evenly;
       }
       &__item {
-        width: auto;
+        width: calc(100% / 4 - 10px);
       }
     }
 
