@@ -1,15 +1,21 @@
 // ************************************************************************
 // Handle Change Languages
 const langList = document.getElementById('navbar__lang-list');
+let langStorage = localStorage.getItem('lang');
+
 langList.addEventListener('change', () => {
+    debugger
     switch (langList.value) {
         case 'ru':
-            window.location = '/index.html';
+            localStorage.setItem('lang','ru');
+            window.location = '/index_ru.html';
             break;
         case 'az':
-            window.location = '/index_az.html';
+            localStorage.setItem('lang','az');
+            window.location = '/index.html';
             break;
         case 'en':
+            localStorage.setItem('lang','en');
             window.location = '/index_en.html';
             break;
         default:
