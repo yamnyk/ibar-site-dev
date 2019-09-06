@@ -8,11 +8,13 @@ function toggleFullProgram() {
 (function () {
   const showMoreBtn = document.querySelector('.program__show-more-btn');
   toggleFullProgram();
-  document.querySelector('.program__show-more').addEventListener('mousedown', () => {
+  document.querySelector('.program__show-more').addEventListener('mousedown', (e) => {
+    e.preventDefault();
     toggleFullProgram();
     showMoreBtn.classList.toggle('program__show-more-btn--activated')
   });
-  document.querySelector('.program__show-more').addEventListener('touchstart', () => {
+  document.querySelector('.program__show-more').addEventListener('touchstart', (e) => {
+    e.preventDefault();
     toggleFullProgram();
     showMoreBtn.classList.toggle('program__show-more-btn--activated')
   });
