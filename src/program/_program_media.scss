@@ -39,9 +39,10 @@
     &__module {
       width: calc(100% / 2 + 20%);
       &-title {
+        width: calc(100% / 2 - 8%);
         text-align: right;
         position: absolute;
-        left: calc(100% - 140%);
+        left: -330px;
       }
     }
     &__show-more {
