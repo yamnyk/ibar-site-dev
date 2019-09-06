@@ -6,7 +6,7 @@ function toggleFullProgram() {
   });
 }
 (function () {
-  const showMoreBtn = document.querySelector('.program__show-more-btn');
+  const showMoreBtn = document.querySelector('.program__show-more-btn') || document.createElement('div');
   toggleFullProgram();
   document.querySelector('.program__show-more').addEventListener('mousedown', (e) => {
     e.preventDefault();

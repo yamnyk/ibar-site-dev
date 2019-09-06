@@ -29,12 +29,12 @@
             top: 30px;
           }
         }
-        &:not(:last-of-type) {
+        &:not(:nth-last-of-type(2)) {
           justify-content: space-between;
           align-items: center;
           flex-direction: row;
 
-          &> .app-form__text-field {
+          & > .app-form__text-field {
             width: 70%;
             margin-top: 0;
           }
