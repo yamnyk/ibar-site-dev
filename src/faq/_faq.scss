@@ -1,6 +1,5 @@
 .faq{
   margin-bottom: 40px;
-  font-family: Arial, sans-serif;
   &__title{
     color: #000000;
     font-size: $h3;
@@ -8,7 +7,6 @@
     border-bottom: 2px solid $aquamarine;
     }
 }
-
 .accordion-item {
   border-bottom: 2px solid $aquamarine;
   padding-top: 10px;
