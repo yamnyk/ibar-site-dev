@@ -71,7 +71,7 @@
                 rgb(128, 149, 195) 100%
               );
       background-size: 15% 100%, 15% 100%, auto 100%;
-      background-position: -5% 0, 105% 0, 20% bottom;
+      background-position: -100px 0, calc(100% + 100px) 0, 20% bottom;
     }
   }
 }
