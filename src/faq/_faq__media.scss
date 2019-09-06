@@ -1,0 +1,20 @@
+@media (min-width: $screen580) {
+  .accordion-item {
+    border-bottom: 2px solid $aquamarine;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+
+  .accordion-item-header {
+    position: relative;
+    cursor: pointer;
+    height: 30px;
+    font-size: 18px;
+  }
+  .accordion-item.show .accordion-item-content {
+    padding: 10px 20px;
+  }
+  .accordion-item-header img{
+    top: 7px;
+  }
+}
