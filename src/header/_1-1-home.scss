@@ -11,6 +11,12 @@
     margin-bottom: 0;
   }
 
+  &--backend {
+    background: url("../img/header/backend/backend-bg.png") calc(100% + 350px) center no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+
   &-wrapper {
     display: flex;
     flex-direction: column;
