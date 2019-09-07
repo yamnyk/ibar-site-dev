@@ -42,43 +42,41 @@ The IBA Tech Academy Team`,
 команда IBA Tech Academy`
     };
 
-    const data = {
-      program: program.value,
-    };
+    let message = responseMessages.az;
 
     switch (localStorage.getItem('lang')) {
       case 'az':
-        data.message = responseMessages.az;
+        message = responseMessages.az;
         break;
       case 'en':
-        data.message = responseMessages.en;
+        message = responseMessages.en;
         break;
       case 'ru':
-        data.message = responseMessages.ru;
+        message = responseMessages.ru;
         break;
       default:
-        data.message = responseMessages.en;
+        message = responseMessages.en;
     }
 
-    fetch(new URL(document.location.origin+'/js/email.php'), {
+    fetch("email.php", {
       method: 'POST',
-      mode: 'cors',
       headers: {
-        "Content-type": 'application/json',
+        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
       },
-      data: JSON.stringify(data)
+      body: `sendTo=${email.value}&message=${message}`
     }).then((res) => {
-      const modal = document.querySelector('.app-modal');
-      modal.style.display = 'flex';
+        console.log(res);
+        const modal = document.querySelector('.app-modal');
+        modal.style.display = 'flex';
 
-      console.log('after email post request - ', res);
+        console.log('after email post request - ', res);
 
-      document.querySelector('.app-modal__msg > .btn-extra').onclick = (e) => {
-        document.querySelector('.app-modal').style.display = 'none';
-      }
-    }, (error) => {
-      console.dir(error)
-    });
+        document.querySelector('.app-modal__msg > .btn-extra').onclick = (e) => {
+          document.querySelector('.app-modal').style.display = 'none';
+        }
+      }, (error) => {
+        console.dir(error)
+      });
   }).then(() => {
     name.innerHTML = '';
     age.innerHTML = '';

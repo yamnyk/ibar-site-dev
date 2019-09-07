@@ -2,6 +2,7 @@
   .stages-wrapper{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .stages__block{
     width: 49%;
@@ -16,7 +17,6 @@
       &_main-block{
         &_text{
           line-height: 1.35;
-          margin-left: 75px;
           margin-top: 20px;
         }
         &_title{

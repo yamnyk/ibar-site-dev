@@ -1,7 +1,9 @@
 .home {
   height: 100vh;
+  //background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 65%),
+  //url("../img/header/Students_foto_main_banner@3x.png") center no-repeat;
   background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 65%),
-  url("../img/header/Students_foto_main_banner@3x.png") center no-repeat;
+  url("../img/header/banner.jpg") center no-repeat;
   background-size: cover;
   margin-bottom: $navbarHeight;
   padding-bottom: 52px;
@@ -37,7 +39,7 @@
     &__wrapper {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
     }
 
@@ -67,9 +69,10 @@
   }
 
   &-title {
-    font-size: $h1;
-    line-height: 80px;
+    font-size: $p1;
     font-weight: 600;
+    margin-bottom: 40px;
+    line-height: 1.25;
   }
 
   &-subtitle {

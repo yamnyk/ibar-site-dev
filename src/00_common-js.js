@@ -22,7 +22,7 @@ function slowScroll(triggerSymbol, headerClassName) {
 }
 
 function manageNavLinks() {
-  if(document.location.pathname !== '/') {
+  if(document.location.pathname !== '/' || document.location.pathname !== '/index.html') {
     const nav = document.querySelector('.navbar__menu-wrapper');
     const navHandle = (e) => {
       if(e.target.hash === '#programs' || e.target.hash === '#stages') {
@@ -39,9 +39,11 @@ function manageNavLinks() {
             break;
           default:
             localStorage.setItem('lang', 'az');
-            window.open(`${document.location.origin}/${e.target.hash}`, '_self')
+            window.open(`${document.location.origin}/${e.target.hash}`, '_self');
             break;
         }
+      } else if(e.target.parentElement.classList.contains('navbar__submenu-wrapper')) {
+        window.open(e.target.href, '_self');
       } else {
         window.scroll({
           top: document.querySelector(e.target.hash).offsetTop,
@@ -56,5 +58,8 @@ function manageNavLinks() {
   }
 }
 
+if(!localStorage.getItem('lang')) {
+  localStorage.setItem('lang', "az");
+}
 manageNavLinks();
 slowScroll('#', 'navbar');
