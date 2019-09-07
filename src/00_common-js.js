@@ -58,5 +58,8 @@ function manageNavLinks() {
   }
 }
 
+if(!localStorage.getItem('lang')) {
+  localStorage.setItem('lang', "az");
+}
 manageNavLinks();
 slowScroll('#', 'navbar');
