@@ -34,7 +34,7 @@ const htmlBuild = () => (
 );
 const phpBuild = () => (
     gulp.src(path.src.php)
-        .pipe(gulp.dest(path.build.js))
+        .pipe(gulp.dest(path.build.html))
         .pipe(browserSync.stream())
 );
 
