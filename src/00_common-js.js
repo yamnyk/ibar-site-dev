@@ -26,6 +26,7 @@ function manageNavLinks() {
     const nav = document.querySelector('.navbar__menu-wrapper');
     const navHandle = (e) => {
       if(e.target.hash === '#programs' || e.target.hash === '#stages') {
+        const language = localStorage.getItem('lang') || 'az';
         switch (localStorage.getItem('lang')) {
           case 'az':
             window.open(`${document.location.origin}/${e.target.hash}`, '_self');
@@ -37,6 +38,7 @@ function manageNavLinks() {
             window.open(`${document.location.origin}/index_ru.html${e.target.hash}`, '_self');
             break;
           default:
+            localStorage.setItem('lang', 'az');
             window.open(`${document.location.origin}/${e.target.hash}`, '_self')
             break;
         }
