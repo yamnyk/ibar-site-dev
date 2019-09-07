@@ -1,12 +1,10 @@
 @media (min-width: $screen980) {
   .stages-wrapper{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
   .stages__block{
     width: 49%;
-    min-height: 466px;
   }
   .stages {
     &__title {

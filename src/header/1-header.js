@@ -4,7 +4,6 @@ const langList = document.getElementById('navbar__lang-list');
 let langStorage = localStorage.getItem('lang');
 
 langList.addEventListener('change', () => {
-    debugger
     switch (langList.value) {
         case 'ru':
             localStorage.setItem('lang','ru');
