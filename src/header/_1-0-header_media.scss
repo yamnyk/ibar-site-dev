@@ -1,7 +1,6 @@
 @media (min-width: 360px) {
   .navbar {
     &-logo img {
-      transform: scale(1.5);
     }
   }
 }
@@ -9,7 +8,8 @@
 @media (min-width: $screen580) {
   .navbar {
     &-logo img {
-      width: 100px;
+      width: auto;
+      height: 40px;
     }
   }
 }
@@ -24,7 +24,6 @@
     }
 
     &-logo img {
-      width: 110px;
     }
 
     &__menu {
