@@ -18,6 +18,7 @@ const path = {
         ejs: 'src/**/*.ejs',
         html: 'src/**/*.html',
         js: 'src/**/*.js',
+        php: 'src/**/*.php',
         style: 'src/**/*.scss',
         img: 'src/img/**/*',
         fonts: 'src/fonts/**/*'
@@ -29,6 +30,11 @@ const htmlBuild = () => (
     gulp.src(path.src.html)
         .pipe(ejs({}, {}, { ext: '' }))
         .pipe(gulp.dest(path.build.html))
+        .pipe(browserSync.stream())
+);
+const phpBuild = () => (
+    gulp.src(path.src.php)
+        .pipe(gulp.dest(path.build.js))
         .pipe(browserSync.stream())
 );
 
@@ -78,6 +84,7 @@ const watcher = () => {
     gulp.watch(path.src.html, htmlBuild).on('change', browserSync.reload);
     gulp.watch(path.src.style, scssBuild).on('change', browserSync.reload);
     gulp.watch(path.src.js, jsBuild).on('change', browserSync.reload);
+    gulp.watch(path.src.php, phpBuild).on('change', browserSync.reload);
     gulp.watch(path.src.img, imgBuild).on('change', browserSync.reload);
     gulp.watch(path.src.fonts, fontsBuild).on('change', browserSync.reload);
 };
@@ -86,6 +93,7 @@ const watcher = () => {
 gulp.task('html', htmlBuild);
 gulp.task('styles', scssBuild);
 gulp.task('js', jsBuild);
+gulp.task('php', phpBuild);
 gulp.task('img', imgBuild);
 gulp.task('fonts', fontsBuild);
 gulp.task('watch', watcher);
@@ -96,6 +104,7 @@ gulp.task('default', gulp.series(
     htmlBuild,
     scssBuild,
     jsBuild,
+    phpBuild,
     gulp.parallel(fontsBuild,imgBuild),
     watcher
 ));
