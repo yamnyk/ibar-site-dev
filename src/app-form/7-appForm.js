@@ -25,13 +25,14 @@ form.addEventListener('submit', (e) => {
 Hər hansı suallarınızla bağlı +994(12)937 nömrəli Məlumat Mərkəzinə zəng edə bilərsiniz.
 
 Hörmətlə, IBA Tech komandası`,
-      en: `Thank you for registering. Your application has been received and sent for processing.
+      en: `[DAN.IT] Оля Пантелеева, [07.09.19 13:13]
+Thank you for registration. Your application has been accepted and sent for processing.
 Our manager will contact you shortly.
 
-If you have any questions that require an urgent answer, you can call us at + 994 (12) 937.
+If you have any questions, please call + 994 (12) 937.
 
-With respect, 
-the IBA Tech Academy team`,
+With kind regards,
+The IBA Tech Academy Team`,
       ru: `Спасибо за регистрацию. Ваша заявка получена и отправлена на обработку.
 В ближайшее время с вами свяжется наш менеджер.
 
@@ -39,7 +40,7 @@ the IBA Tech Academy team`,
 
 С уважением, 
 команда IBA Tech Academy`
-    }
+    };
 
     const data = {
       program: program.value,
@@ -63,7 +64,7 @@ the IBA Tech Academy team`,
       method: 'POST',
       mode: 'cors',
       headers: {
-        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+        "Content-type": 'application/json',
       },
       data: JSON.stringify(data)
     }).then((res) => {
