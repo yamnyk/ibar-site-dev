@@ -2,10 +2,9 @@
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
-  height: $navbarHeight;
-  background-color: $darkBlue;
+  padding: 10px 0;
+  background-color: #1b3e85;
   z-index: 100;
 
   &__content {
@@ -20,7 +19,8 @@
   }
 
   &-logo img {
-    width: 80px;
+    //height: 40px;
+    width: 90px;
   }
 
   & a {
@@ -32,6 +32,11 @@
     align-items: center;
     justify-content: space-between;
     flex-grow: 1;
+
+    & .btn-small {
+      transform: scale(0.8);
+      font-weight: 500;
+    }
 
     &-wrapper {
       position: absolute;

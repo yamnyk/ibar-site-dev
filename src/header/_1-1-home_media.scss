@@ -4,10 +4,14 @@
       &__wrapper {
         flex-wrap: wrap;
         flex-direction: row;
+        align-items: flex-start;
       }
       &__item {
         width: calc(100% / 2 - 20px);
       }
+    }
+    &-title {
+      font-size: $h1;
     }
   }
 }

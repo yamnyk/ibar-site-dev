@@ -1,12 +1,11 @@
 @media (min-width: $screen980) {
   .stages-wrapper{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .stages__block{
     width: 49%;
-    min-height: 466px;
   }
   .stages {
     &__title {
@@ -18,7 +17,6 @@
       &_main-block{
         &_text{
           line-height: 1.35;
-          margin-left: 75px;
           margin-top: 20px;
         }
         &_title{
