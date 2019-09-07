@@ -10,6 +10,9 @@
         width: calc(100% / 2 - 20px);
       }
     }
+    &__title {
+      font-size: $h1;
+    }
   }
 }
 
