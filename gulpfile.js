@@ -17,7 +17,7 @@ const path = {
     src: {
         ejs: 'src/**/*.ejs',
         html: 'src/lang/**/*.html',
-        php: 'src/php/**/*.php',
+        php: 'src/php/**/*.*',
         js: 'src/**/*.js',
         style: 'src/**/*.scss',
         img: 'src/img/**/*',
