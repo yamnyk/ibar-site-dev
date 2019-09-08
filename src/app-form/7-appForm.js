@@ -25,8 +25,7 @@ form.addEventListener('submit', (e) => {
 Hər hansı suallarınızla bağlı +994(12)937 nömrəli Məlumat Mərkəzinə zəng edə bilərsiniz.
 
 Hörmətlə, IBA Tech komandası`,
-      en: `[DAN.IT] Оля Пантелеева, [07.09.19 13:13]
-Thank you for registration. Your application has been accepted and sent for processing.
+      en: `Thank you for registration. Your application has been accepted and sent for processing.
 Our manager will contact you shortly.
 
 If you have any questions, please call + 994 (12) 937.
@@ -55,7 +54,7 @@ The IBA Tech Academy Team`,
         message = responseMessages.ru;
         break;
       default:
-        message = responseMessages.en;
+        message = responseMessages.az;
     }
 
     fetch("email.php", {
