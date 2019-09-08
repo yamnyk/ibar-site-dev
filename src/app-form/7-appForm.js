@@ -57,7 +57,7 @@ The IBA Tech Academy Team`,
         message = responseMessages.az;
     }
 
-    fetch("email.php", {
+    fetch("/email", {
       method: 'POST',
       headers: {
         "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"

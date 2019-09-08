@@ -7,9 +7,9 @@ langList.addEventListener('change', () => {
     function redirectURL(toFolder) {
         let resURL = '';
         if(window.location.pathname.includes('frontend')){
-            resURL = window.location.origin.concat(toFolder).concat('frontend.html')
+            resURL = window.location.origin.concat(toFolder).concat('frontend')
         } else if(window.location.pathname.includes('backend')) {
-            resURL = window.location.origin.concat(toFolder).concat('backend.html')
+            resURL = window.location.origin.concat(toFolder).concat('backend')
         } else {
             resURL = window.location.origin.concat(toFolder)
         }

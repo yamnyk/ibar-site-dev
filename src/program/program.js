@@ -1,9 +1,15 @@
 function toggleFullProgram() {
-  document.querySelectorAll('.program__module').forEach((module, ind) => {
+  const allModules = document.querySelectorAll('.program__module');
+  allModules.forEach((module, ind) => {
     if(ind > 1) {
       module.hidden = !module.hidden;
     }
   });
+  window.scroll({
+    top: allModules[0].offsetTop - 80,
+    left: 0,
+    behavior: 'smooth'
+  })
 }
 (function () {
   const showMoreBtn = document.querySelector('.program__show-more-btn') || document.createElement('div');
