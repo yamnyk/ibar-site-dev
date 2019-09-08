@@ -5,17 +5,17 @@ let langStorage = localStorage.getItem('lang');
 
 langList.addEventListener('change', () => {
     switch (langList.value) {
-        case 'ru':
-            localStorage.setItem('lang','ru');
-            window.location = '/index_ru.html';
-            break;
         case 'az':
             localStorage.setItem('lang','az');
-            window.location = '/index.html';
+            window.location = window.location.pathname;
             break;
         case 'en':
             localStorage.setItem('lang','en');
-            window.location = '/index_en.html';
+            window.location = 'en' +window.location.pathname;
+            break;
+        case 'ru':
+            localStorage.setItem('lang','ru');
+            window.location = 'ru/' + window.location.pathname;
             break;
         default:
             console.log('Unknown language!');
