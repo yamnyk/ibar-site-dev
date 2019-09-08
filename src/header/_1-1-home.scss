@@ -10,14 +10,14 @@
 
   &--frontend {
     background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 65%),
-    url("../img/header/frontend/frontend-bg.png") -250px center no-repeat;
+    url("../img/header/frontend/frontend-bg.jpg") -250px center no-repeat;
     background-size: cover;
     margin-bottom: 0;
   }
 
   &--backend {
     background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 65%),
-    url("../img/header/backend/backend-bg.png") calc(100% + 350px) center no-repeat;
+    url("../img/header/backend/backend-bg.jpg") calc(100% + 350px) center no-repeat;
     background-size: cover;
     margin-bottom: 0;
   }
