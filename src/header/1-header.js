@@ -4,18 +4,30 @@ const langList = document.getElementById('navbar__lang-list');
 let langStorage = localStorage.getItem('lang');
 
 langList.addEventListener('change', () => {
+    function redirectURL(toFolder) {
+        let resURL = '';
+        if(window.location.pathname.includes('frontend')){
+            resURL = window.location.origin.concat(toFolder).concat('frontend.html')
+        } else if(window.location.pathname.includes('backend')) {
+            resURL = window.location.origin.concat(toFolder).concat('backend.html')
+        } else {
+            resURL = window.location.origin.concat(toFolder)
+        }
+        return resURL;
+    }
+
     switch (langList.value) {
         case 'az':
             localStorage.setItem('lang','az');
-            window.location = window.location.pathname;
+            window.location.assign(redirectURL('/'));
             break;
         case 'en':
             localStorage.setItem('lang','en');
-            window.location = 'en' +window.location.pathname;
+            window.location.assign(redirectURL('/en/'));
             break;
         case 'ru':
             localStorage.setItem('lang','ru');
-            window.location = 'ru/' + window.location.pathname;
+            window.location.assign(redirectURL('/ru/'));
             break;
         default:
             console.log('Unknown language!');
