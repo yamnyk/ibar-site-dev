@@ -32,10 +32,10 @@ function manageNavLinks() {
             window.open(`${document.location.origin}/${e.target.hash}`, '_self');
             break;
           case "en":
-            window.open(`${document.location.origin}/index_en.html${e.target.hash}`, '_self');
+            window.open(`${document.location.origin}/en/${e.target.hash}`, '_self');
             break;
           case 'ru':
-            window.open(`${document.location.origin}/index_ru.html${e.target.hash}`, '_self');
+            window.open(`${document.location.origin}/ru/${e.target.hash}`, '_self');
             break;
           default:
             localStorage.setItem('lang', 'az');
@@ -58,8 +58,10 @@ function manageNavLinks() {
   }
 }
 
-if(!localStorage.getItem('lang')) {
-  localStorage.setItem('lang', "az");
-}
+(function () {
+  if (!localStorage.getItem('lang')) {
+    localStorage.setItem('lang', "az");
+  }
+})();
 manageNavLinks();
 slowScroll('#', 'navbar');

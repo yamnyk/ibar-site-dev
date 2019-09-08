@@ -43,14 +43,14 @@ The IBA Tech Academy Team`,
 
     let message = responseMessages.az;
 
-    switch (localStorage.getItem('lang')) {
-      case 'az':
+    switch (true) {
+      case window.location.pathname.includes('az'):
         message = responseMessages.az;
         break;
-      case 'en':
+      case window.location.pathname.includes('en'):
         message = responseMessages.en;
         break;
-      case 'ru':
+      case window.location.pathname.includes('ru'):
         message = responseMessages.ru;
         break;
       default:
@@ -77,12 +77,13 @@ The IBA Tech Academy Team`,
         console.dir(error)
       });
   }).then(() => {
+    debugger
     name.innerHTML = '';
     age.innerHTML = '';
     tel.innerHTML = '';
     email.innerHTML = '';
-    program.innerHTML = '';
-    schedule.innerHTML = '';
+    // program.innerHTML = '';
+    // schedule.innerHTML = '';
     letter.innerHTML = '';
   });
 });
