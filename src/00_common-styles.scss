@@ -5,12 +5,12 @@
 @import "font-faces";
 
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Light', sans-serif;
   scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Light', sans-serif;
   box-sizing: border-box;
 }
 
@@ -19,6 +19,11 @@ input::-webkit-inner-spin-button {
   appearance: none;
   display: none;
 }
+.txt-bold {
+  font-weight: bold !important;
+  color: black;
+}
+
 
 a { text-decoration: none; }
 
