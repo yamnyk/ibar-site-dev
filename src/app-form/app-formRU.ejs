@@ -1,7 +1,7 @@
 <section class="app-wrapper" id="appForm">
     <div class="container app">
         <h2 class="app__title">Подать заявку</h2>
-        <form action="js/email.php" class="app-form">
+        <form action="js/email.php" class="app-form" id="form1">
             <label for="formName" class="app-form__text app-form__text--half-width">
                 ФИО
                 <input autocomplete="off" type="text" id="formName" class="app-form__text-field " placeholder="Иванов Иван Иванович" required>
@@ -10,9 +10,13 @@
                 Возраст
                 <input autocomplete="off" type="number" min='0' max="99" id="formAge" class="app-form__text-field" placeholder="Укажите сколько вам полных лет" required>
             </label>
-            <label for="formPhone" class="app-form__text app-form__text--half-width">
+<!--            <label for="formPhone" class="app-form__text app-form__text&#45;&#45;half-width">
                 Телефон
                 <input autocomplete="off" type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="+ 994 00 000 00 00" required>
+            </label>-->
+            <label for="formPhone" class="app-form__text app-form__text--half-width">
+                Телефон
+                <input placeholder="+ 994 00 000 00 00" required type="tel" class="app-form__text-field" id="zipCode" onkeyup="javascript:mask('zipCode', '+000 00 000 00 00', event);" >
             </label>
             <label for="formMail" class="app-form__text app-form__text--half-width">
                 E-mail

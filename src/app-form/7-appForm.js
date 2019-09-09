@@ -1,9 +1,54 @@
+
+    function mask(inputName, mask, evt) {
+        try {
+            let text = document.getElementById(inputName);
+            let value = text.value;
+
+            try {
+                let e = (evt.which) ? evt.which : event.keyCode;
+                if ( e == 46 || e == 8 ) {
+                    text.value = "";
+                    return;
+                }
+            } catch (e1) {}
+
+            let literalPattern=/[0\*]/;
+            let numberPattern=/[0-9]/;
+            let newValue = "";
+
+            for (let vId = 0, mId = 0 ; mId < mask.length ; ) {
+                if (mId >= value.length)
+                    break;
+
+                // Number expected but got a different value, store only the valid portion
+                if (mask[mId] == '0' && value[vId].match(numberPattern) == null) {
+                    break;
+                }
+
+                // Found a literal
+                while (mask[mId].match(literalPattern) == null) {
+                    if (value[vId] == mask[mId])
+                        break;
+
+                    newValue += mask[mId++];
+                }
+
+                newValue += value[vId++];
+                mId++;
+            }
+
+            text.value = newValue;
+        } catch(e) {}
+    }
+
+
+
 const form = document.querySelector('#appForm');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = document.querySelector('#formName').value;
   const age = document.querySelector('#formAge').value;
-  const tel = document.querySelector('#formPhone').value;
+  const tel = document.querySelector('#zipCode').value;
   const email = document.querySelector('#formMail').value;
   const program = document.querySelector('#formProgram').value;
   const schedule = document.querySelector('#formSchedule').value;
@@ -20,7 +65,7 @@ form.addEventListener('submit', (e) => {
 
   document.querySelector('#formName').value = '';
   document.querySelector('#formAge').value = '';
-  document.querySelector('#formPhone').value = '';
+  document.querySelector('#zipCode').value = '';
   document.querySelector('#formMail').value = '';
   document.querySelector('#formLetter').value = '';
 
