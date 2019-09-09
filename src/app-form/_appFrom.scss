@@ -87,6 +87,9 @@
         background-color: $milk;
         border-radius: 3px;
         margin-right: 10px;
+        &--span{
+          line-height: 1.3;
+        }
         &::after {
           content: '';
           display: none;
