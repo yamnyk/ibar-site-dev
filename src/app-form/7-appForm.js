@@ -1,9 +1,55 @@
+
+    function mask(inputName, mask, evt) {
+        try {
+            var text = document.getElementById(inputName);
+            var value = text.value;
+
+            // If user pressed DEL or BACK SPACE, clean the value
+            try {
+                var e = (evt.which) ? evt.which : event.keyCode;
+                if ( e == 46 || e == 8 ) {
+                    text.value = "";
+                    return;
+                }
+            } catch (e1) {}
+
+            var literalPattern=/[0\*]/;
+            var numberPattern=/[0-9]/;
+            var newValue = "";
+
+            for (var vId = 0, mId = 0 ; mId < mask.length ; ) {
+                if (mId >= value.length)
+                    break;
+
+                // Number expected but got a different value, store only the valid portion
+                if (mask[mId] == '0' && value[vId].match(numberPattern) == null) {
+                    break;
+                }
+
+                // Found a literal
+                while (mask[mId].match(literalPattern) == null) {
+                    if (value[vId] == mask[mId])
+                        break;
+
+                    newValue += mask[mId++];
+                }
+
+                newValue += value[vId++];
+                mId++;
+            }
+
+            text.value = newValue;
+        } catch(e) {}
+    }
+
+
+
 const form = document.querySelector('#appForm');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = document.querySelector('#formName').value;
   const age = document.querySelector('#formAge').value;
-  const tel = document.querySelector('#formPhone').value;
+  const tel = document.querySelector('#formPhone').value.match(/\d/g).length===10;
   const email = document.querySelector('#formMail').value;
   const program = document.querySelector('#formProgram').value;
   const schedule = document.querySelector('#formSchedule').value;
