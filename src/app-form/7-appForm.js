@@ -1,22 +1,30 @@
 const form = document.querySelector('#appForm');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const name = document.querySelector('#formName');
-  const age = document.querySelector('#formAge');
-  const tel = document.querySelector('#formPhone');
-  const email = document.querySelector('#formMail');
-  const program = document.querySelector('#formProgram');
-  const schedule = document.querySelector('#formSchedule');
-  const letter = document.querySelector('#formLetter');
+  const name = document.querySelector('#formName').value;
+  const age = document.querySelector('#formAge').value;
+  const tel = document.querySelector('#formPhone').value;
+  const email = document.querySelector('#formMail').value;
+  const program = document.querySelector('#formProgram').value;
+  const schedule = document.querySelector('#formSchedule').value;
+  const letter = document.querySelector('#formLetter').value;
 
   const url = new URL('https://script.google.com/macros/s/AKfycbzKBJ4yX6b8mwtzJmaPtGew0wOCthTeceoXNAidAJE53y_vsA/exec');
-  url.searchParams.append('name', name.value);
-  url.searchParams.append('age', age.value);
-  url.searchParams.append('tel', tel.value);
-  url.searchParams.append('mail', email.value);
-  url.searchParams.append('program', program.value);
-  url.searchParams.append('schedule', schedule.value);
-  url.searchParams.append('letter', letter.value);
+  url.searchParams.append('name', name);
+  url.searchParams.append('age', age);
+  url.searchParams.append('tel', tel);
+  url.searchParams.append('mail', email);
+  url.searchParams.append('program', program);
+  url.searchParams.append('schedule', schedule);
+  url.searchParams.append('letter', letter);
+
+  document.querySelector('#formName').value = '';
+  document.querySelector('#formAge').value = '';
+  document.querySelector('#formPhone').value = '';
+  document.querySelector('#formMail').value = '';
+  document.querySelector('#formLetter').value = '';
+
+  document.querySelector('.app-form > .btn-extra').disabled = true;
 
   fetch(url).then(() => {
     let responseMessages = {
@@ -42,6 +50,13 @@ The IBA Tech Academy Team`,
     };
 
     let message = responseMessages.az;
+    const applicationCopy = `name: ${name};
+    email: ${email};
+    age: ${age};
+    tel: ${tel};
+    program: ${program};
+    schedule: ${schedule};
+    motivation letter: ${letter};`;
 
     switch (true) {
       case window.location.pathname.includes('az'):
@@ -62,28 +77,25 @@ The IBA Tech Academy Team`,
       headers: {
         "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
       },
-      body: `sendTo=${email.value}&message=${message}`
+      body: `sendTo=${email}&message=${message}`
     }).then((res) => {
-        console.log(res);
-        const modal = document.querySelector('.app-modal');
-        modal.style.display = 'flex';
+      fetch("/email", {
+        method: 'POST',
+        headers: {
+          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        body: `sendTo=apply@ibatech.az&message=${applicationCopy}`
+      })
+    }).then((res) => {
+      console.log(res);
+      const modal = document.querySelector('.app-modal');
+      modal.style.display = 'flex';
 
-        console.log('after email post request - ', res);
-
-        document.querySelector('.app-modal__msg > .btn-extra').onclick = (e) => {
-          document.querySelector('.app-modal').style.display = 'none';
-        }
-      }, (error) => {
-        console.dir(error)
-      });
-  }).then(() => {
-    debugger
-    name.innerHTML = '';
-    age.innerHTML = '';
-    tel.innerHTML = '';
-    email.innerHTML = '';
-    // program.innerHTML = '';
-    // schedule.innerHTML = '';
-    letter.innerHTML = '';
-  });
+      document.querySelector('.app-modal__msg > .btn-extra').onclick = (e) => {
+        document.querySelector('.app-modal').style.display = 'none';
+      }
+    }, (error) => {
+      console.dir(error)
+    });
+  })
 });
