@@ -25,25 +25,26 @@ function manageNavLinks() {
   if(document.location.pathname !== '/' || document.location.pathname !== '/index.html') {
     const nav = document.querySelector('.navbar__menu-wrapper');
     const navHandle = (e) => {
-      if(e.target.hash === '#programs' || e.target.hash === '#stages') {
+      e.preventDefault();
+      if(e.target.hash === '#programs' || e.target.hash === '#stages' || e.target.hash === '#about') {
         const language = localStorage.getItem('lang') || 'az';
         switch (localStorage.getItem('lang')) {
           case 'az':
-            window.open(`${document.location.origin}/${e.target.hash}`, '_self');
+            window.location.assign(`${document.location.origin}/${e.target.hash}`);
             break;
           case "en":
-            window.open(`${document.location.origin}/index_en.html${e.target.hash}`, '_self');
+            window.location.assign(`${document.location.origin}/en/${e.target.hash}`);
             break;
           case 'ru':
-            window.open(`${document.location.origin}/index_ru.html${e.target.hash}`, '_self');
+            window.location.assign(`${document.location.origin}/ru/${e.target.hash}`);
             break;
           default:
             localStorage.setItem('lang', 'az');
-            window.open(`${document.location.origin}/${e.target.hash}`, '_self');
+            window.location.assign(`${document.location.origin}/${e.target.hash}`);
             break;
         }
       } else if(e.target.parentElement.classList.contains('navbar__submenu-wrapper')) {
-        window.open(e.target.href, '_self');
+        window.location.assign(e.target.href);
       } else {
         window.scroll({
           top: document.querySelector(e.target.hash).offsetTop,
@@ -58,8 +59,10 @@ function manageNavLinks() {
   }
 }
 
-if(!localStorage.getItem('lang')) {
-  localStorage.setItem('lang', "az");
-}
+(function () {
+  if (!localStorage.getItem('lang')) {
+    localStorage.setItem('lang', "az");
+  }
+})();
 manageNavLinks();
 slowScroll('#', 'navbar');

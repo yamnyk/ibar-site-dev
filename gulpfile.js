@@ -16,9 +16,9 @@ const path = {
     },
     src: {
         ejs: 'src/**/*.ejs',
-        html: 'src/**/*.html',
+        html: 'src/lang/**/*.html',
+        php: 'src/php/**/*.*',
         js: 'src/**/*.js',
-        php: 'src/**/*.php',
         style: 'src/**/*.scss',
         img: 'src/img/**/*',
         fonts: 'src/fonts/**/*'
