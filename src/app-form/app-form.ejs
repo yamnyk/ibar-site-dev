@@ -12,7 +12,8 @@
             </label>
             <label for="formPhone" class="app-form__text app-form__text--half-width">
                 Telefon
-                <input autocomplete="off" type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="+ 994 00 000 00 00" required>
+                <input placeholder="+ 994 00 000 00 00" required type="tel" class="app-form__text-field" id="zipCode" onkeyup="javascript:mask('zipCode', '+000 00 000 00 00', event);" >
+                <!--<input autocomplete="off" type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="+ 994 00 000 00 00" required>-->
             </label>
             <label for="formMail" class="app-form__text app-form__text--half-width">
                 E-mail
