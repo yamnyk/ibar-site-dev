@@ -1,23 +1,22 @@
 
     function mask(inputName, mask, evt) {
         try {
-            var text = document.getElementById(inputName);
-            var value = text.value;
+            let text = document.getElementById(inputName);
+            let value = text.value;
 
-            // If user pressed DEL or BACK SPACE, clean the value
             try {
-                var e = (evt.which) ? evt.which : event.keyCode;
+                let e = (evt.which) ? evt.which : event.keyCode;
                 if ( e == 46 || e == 8 ) {
                     text.value = "";
                     return;
                 }
             } catch (e1) {}
 
-            var literalPattern=/[0\*]/;
-            var numberPattern=/[0-9]/;
-            var newValue = "";
+            let literalPattern=/[0\*]/;
+            let numberPattern=/[0-9]/;
+            let newValue = "";
 
-            for (var vId = 0, mId = 0 ; mId < mask.length ; ) {
+            for (let vId = 0, mId = 0 ; mId < mask.length ; ) {
                 if (mId >= value.length)
                     break;
 
@@ -49,7 +48,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = document.querySelector('#formName').value;
   const age = document.querySelector('#formAge').value;
-  const tel = document.querySelector('#formPhone').value.match(/\d/g).length===10;
+  const tel = document.querySelector('#zipCode').value;
   const email = document.querySelector('#formMail').value;
   const program = document.querySelector('#formProgram').value;
   const schedule = document.querySelector('#formSchedule').value;
@@ -66,7 +65,7 @@ form.addEventListener('submit', (e) => {
 
   document.querySelector('#formName').value = '';
   document.querySelector('#formAge').value = '';
-  document.querySelector('#formPhone').value = '';
+  document.querySelector('#zipCode').value = '';
   document.querySelector('#formMail').value = '';
   document.querySelector('#formLetter').value = '';
 
