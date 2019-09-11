@@ -1,10 +1,12 @@
 const gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    ejs = require('gulp-ejs'),
-    prefixer = require('gulp-autoprefixer'),
-    concat = require('gulp-concat'),
-    clean = require('gulp-clean'),
-    browserSync = require('browser-sync');
+  babel = require('gulp-babel'),
+  uglify = require('gulp-uglify'),
+  sass = require('gulp-sass'),
+  ejs = require('gulp-ejs'),
+  prefixer = require('gulp-autoprefixer'),
+  concat = require('gulp-concat'),
+  clean = require('gulp-clean'),
+  browserSync = require('browser-sync');
 
 const path = {
     build: {
@@ -27,51 +29,55 @@ const path = {
 };
 
 const htmlBuild = () => (
-    gulp.src(path.src.html)
-        .pipe(ejs({}, {}, { ext: '' }))
-        .pipe(gulp.dest(path.build.html))
-        .pipe(browserSync.stream())
+  gulp.src(path.src.html)
+    .pipe(ejs({}, {}, { ext: '' }))
+    .pipe(gulp.dest(path.build.html))
+    .pipe(browserSync.stream())
 );
 const phpBuild = () => (
-    gulp.src(path.src.php)
-        .pipe(gulp.dest(path.build.html))
-        .pipe(browserSync.stream())
+  gulp.src(path.src.php)
+    .pipe(gulp.dest(path.build.html))
+    .pipe(browserSync.stream())
 );
 
 const scssBuild = () => (
-    gulp.src(path.src.style)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(concat('style.css'))
-        .pipe(clean())
-        .pipe(prefixer({
-            Browserslist: ['> 0.01%','last 100 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest(path.build.css))
-        .pipe(browserSync.stream())
+  gulp.src(path.src.style)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(concat('style.css'))
+    .pipe(clean())
+    .pipe(prefixer({
+        Browserslist: ['> 0.01%','last 100 versions'],
+        cascade: false
+    }))
+    .pipe(gulp.dest(path.build.css))
+    .pipe(browserSync.stream())
 );
 
 const jsBuild = () => (
-    gulp.src(path.src.js)
-        .pipe(concat('script.js'))
-        .pipe(gulp.dest(path.build.js))
-        .pipe(browserSync.stream())
+  gulp.src(path.src.js)
+    .pipe(concat('script.js'))
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest(path.build.js))
+    .pipe(browserSync.stream())
 );
 
 const imgBuild = () => (
-    gulp.src(path.src.img)
-        .pipe(gulp.dest(path.build.img))
+  gulp.src(path.src.img)
+    .pipe(gulp.dest(path.build.img))
 );
 
 const fontsBuild = () => (
-    gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts))
-        .pipe(browserSync.stream())
+  gulp.src(path.src.fonts)
+    .pipe(gulp.dest(path.build.fonts))
+    .pipe(browserSync.stream())
 );
 
 const cleanBuild = () => (
-    gulp.src(path.clean, {allowEmpty: true})
-        .pipe(clean())
+  gulp.src(path.clean, {allowEmpty: true})
+    .pipe(clean())
 );
 
 const watcher = () => {
@@ -100,11 +106,11 @@ gulp.task('watch', watcher);
 gulp.task('clean', cleanBuild);
 
 gulp.task('default', gulp.series(
-    cleanBuild,
-    htmlBuild,
-    scssBuild,
-    jsBuild,
-    phpBuild,
-    gulp.parallel(fontsBuild,imgBuild),
-    watcher
+  cleanBuild,
+  htmlBuild,
+  scssBuild,
+  jsBuild,
+  phpBuild,
+  gulp.parallel(fontsBuild,imgBuild),
+  watcher
 ));
