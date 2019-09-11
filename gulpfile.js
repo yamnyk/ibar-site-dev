@@ -2,6 +2,7 @@ const gulp = require('gulp'),
   babel = require('gulp-babel'),
   uglify = require('gulp-uglify'),
   sass = require('gulp-sass'),
+  cleanCSS = require('gulp-clean-css'),
   ejs = require('gulp-ejs'),
   prefixer = require('gulp-autoprefixer'),
   concat = require('gulp-concat'),
@@ -49,6 +50,7 @@ const scssBuild = () => (
         Browserslist: ['> 0.01%','last 100 versions'],
         cascade: false
     }))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(path.build.css))
     .pipe(browserSync.stream())
 );
