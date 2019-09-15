@@ -1,47 +1,44 @@
+function mask(inputName, mask, evt) {
+  try {
+    let text = document.getElementById(inputName);
+    let value = text.value;
 
-    function mask(inputName, mask, evt) {
-        try {
-            let text = document.getElementById(inputName);
-            let value = text.value;
+    try {
+      let e = (evt.which) ? evt.which : event.keyCode;
+      if ( e == 46 || e == 8 ) {
+        text.value = "";
+        return;
+      }
+    } catch (e1) {}
 
-            try {
-                let e = (evt.which) ? evt.which : event.keyCode;
-                if ( e == 46 || e == 8 ) {
-                    text.value = "";
-                    return;
-                }
-            } catch (e1) {}
+    let literalPattern=/[0\*]/;
+    let numberPattern=/[0-9]/;
+    let newValue = "";
 
-            let literalPattern=/[0\*]/;
-            let numberPattern=/[0-9]/;
-            let newValue = "";
+    for (let vId = 0, mId = 0 ; mId < mask.length ; ) {
+      if (mId >= value.length)
+        break;
 
-            for (let vId = 0, mId = 0 ; mId < mask.length ; ) {
-                if (mId >= value.length)
-                    break;
+      // Number expected but got a different value, store only the valid portion
+      if (mask[mId] == '0' && value[vId].match(numberPattern) == null) {
+        break;
+      }
 
-                // Number expected but got a different value, store only the valid portion
-                if (mask[mId] == '0' && value[vId].match(numberPattern) == null) {
-                    break;
-                }
+      // Found a literal
+      while (mask[mId].match(literalPattern) == null) {
+        if (value[vId] == mask[mId])
+          break;
 
-                // Found a literal
-                while (mask[mId].match(literalPattern) == null) {
-                    if (value[vId] == mask[mId])
-                        break;
+        newValue += mask[mId++];
+      }
 
-                    newValue += mask[mId++];
-                }
-
-                newValue += value[vId++];
-                mId++;
-            }
-
-            text.value = newValue;
-        } catch(e) {}
+      newValue += value[vId++];
+      mId++;
     }
 
-
+    text.value = newValue;
+  } catch(e) {}
+}
 
 const form = document.querySelector('#appForm');
 form.addEventListener('submit', (e) => {
@@ -117,30 +114,29 @@ The IBA Tech Academy Team`,
         message = responseMessages.az;
     }
 
-    fetch("/email", {
-      method: 'POST',
-      headers: {
-        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-      },
-      body: `sendTo=${email}&message=${message}`
-    }).then((res) => {
-      fetch("/email", {
-        method: 'POST',
-        headers: {
-          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-        },
-        body: `sendTo=apply@ibatech.az&message=${applicationCopy}`
-      })
-    }).then((res) => {
-      console.log(res);
+    // fetch("/email", {
+    //   method: 'POST',
+    //   headers: {
+    //     "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+    //   },
+    //   body: `sendTo=${email}&message=${message}`
+    // }).then((res) => {
+    //   fetch("/email", {
+    //     method: 'POST',
+    //     headers: {
+    //       "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+    //     },
+    //     body: `sendTo=apply@ibatech.az&message=${applicationCopy}`
+    //   })
+    // }).then((res) => {
       const modal = document.querySelector('.app-modal');
       modal.style.display = 'flex';
 
       document.querySelector('.app-modal__msg > .btn-extra').onclick = (e) => {
         document.querySelector('.app-modal').style.display = 'none';
       }
-    }, (error) => {
-      console.dir(error)
-    });
+    // }, (error) => {
+    //   console.dir(error)
+    // });
   })
 });
