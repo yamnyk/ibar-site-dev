@@ -50,7 +50,7 @@ const scssBuild = () => (
         Browserslist: ['> 0.01%','last 100 versions'],
         cascade: false
     }))
-    // .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(path.build.css))
     .pipe(browserSync.stream())
 );
