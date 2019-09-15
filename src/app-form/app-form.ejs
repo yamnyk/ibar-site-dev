@@ -1,0 +1,58 @@
+<section class="app-wrapper" id="appForm">
+    <div class="container app">
+        <h2 class="app__title">Ərizə göndər</h2>
+        <form action="/email" class="app-form">
+            <label for="formName" class="app-form__text app-form__text--half-width">
+                Ad, Soyad
+                <input autocomplete="off" type="text" id="formName" class="app-form__text-field " placeholder="A.S.A. Məmmədov Məmməd Məmməd oğlu" required>
+            </label>
+            <label for="formAge" class="app-form__text app-form__text--half-width">
+                Yaş
+                <input autocomplete="off" type="number"  min='0' max="99" id="formAge" class="app-form__text-field" placeholder="Yaşınızı göstərin" required>
+            </label>
+            <label for="formPhone" class="app-form__text app-form__text--half-width">
+                Telefon
+                <input placeholder="+ 994 00 000 00 00" required type="tel" class="app-form__text-field" id="zipCode" onkeyup="javascript:mask('zipCode', '+000 00 000 00 00', event);" >
+                <!--<input autocomplete="off" type="tel" pattern="(\+?\d[- .]*){7,13}" id="formPhone" class="app-form__text-field" placeholder="+ 994 00 000 00 00" required>-->
+            </label>
+            <label for="formMail" class="app-form__text app-form__text--half-width">
+                E-mail
+                <input autocomplete="off" type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="formMail" class="app-form__text-field" placeholder="Email address" required>
+            </label>
+            <label for="formProgram" class="app-form__text app-form__text--arrow app-form__text--full-width">
+                İxtisaslaşma
+                <select autocomplete="off" name="program" id="formProgram" class="app-form__text-field" required>
+                    <option disabled selected value> İstiqaməti seçin </option>
+                    <option value="frontend">FrontEnd</option>
+                    <option value="backend">BackEnd</option>
+                </select>
+            </label>
+            <label for="formSchedule" class="app-form__text app-form__text--arrow app-form__text--full-width">
+                Qrafik
+                <select autocomplete="off" name="program" id="formSchedule" class="app-form__text-field" required>
+                    <option disabled selected value> Qrafiki seçin </option>
+                    <option value="morning">Səhər</option>
+                    <option value="evening">Axşam</option>
+                </select>
+            </label>
+            <p class="app-form__text-field--note">IBA Tech Akademiyası qrafik və dərs cədvəlində dəyişiklik etmək hüququna malikdir</p>
+            <label for="formLetter" class="app-form__text app-form__text--full-width">
+                Motivasiya məktubu
+                <textarea autocomplete="off" maxlength="500" id="formLetter" class="app-form__text-field motivation-letter" placeholder="Öz təcrübəniz, yaxud bu proqram üzrə təhsil arzunuz haqqında yazın. Çoxsaylı namizədlər arasından niyə məhz Sizi seçməliyik? Maksimum 500 simvol." required></textarea>
+            </label>
+            <label for="personalData" class="app-form__data">
+                <input required checked type="checkbox" id="personalData">
+                <span class="app-form__data--check"></span>
+                <span class="app-form__data--check--span">Fərdi məlumatlarımın emalına icazə verirəm <br /> 18 yaşımın tamamlandığını və bank sektorunda çalışmadığımı təsdiqləyirəm</span>
+            </label>
+            <input type="submit" value="Göndər" class="btn-extra">
+        </form>
+    </div>
+    <div class="app-modal">
+        <div class="app-modal__msg">
+            <p class="app-modal__highlight">Ərizəniz göndərildi! Məlumatlarınız yoxlandıqdan sonra əməkdaşlarımız Sizinlə əlaqə saxlayacaqlar</p>
+            <button class="btn-extra">Ok</button>
+        </div>
+    </div>
+    <%- include modal-close/modal-close.ejs %>
+</section>

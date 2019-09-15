@@ -1,0 +1,155 @@
+//*** about ***//
+.about {
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+
+    &__article {
+      background-color: $milk;
+      padding: 20px;
+
+      &-title {
+        font-size: $h3;
+        font-weight: 500;
+      }
+
+      &-splitter {
+        border-top: 3px solid $aquamarine;
+        margin: 8px 0 14px;
+      }
+
+      &-text {
+        font-size: $p3;
+        line-height: 1.22;
+
+        & > p {
+          margin-top: 20px;
+        }
+
+        &--bold {
+          font-weight: bold;
+        }
+      }
+
+    }
+
+    &__image-box {
+      display: inline-block;
+      width: 100%;
+      padding: 20px;
+    }
+
+    &__img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 20px 32px;
+
+    &__title {
+      font-size: 28px;
+      color: $lightBlue;
+      margin-top: 12px;
+      margin-right: 16px;
+    }
+
+    &__sponsor-1 {
+      margin-top: 12px;
+    }
+
+    &__sponsor-1:hover {
+      cursor: pointer;
+    }
+
+    &__sponsor-2 {
+      margin-top: 12px;
+    }
+
+    &__sponsor-2:hover {
+      cursor: pointer;
+    }
+  }
+
+  & span {
+    font-weight: 300;
+  }
+  &--frontend {
+    padding-top: 55px;
+  }
+}
+
+//*** modal ***//
+.modal {
+  &-window {
+    &__underlay {
+      visibility: hidden;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding-top: 68px;
+      background-color: rgba(0,0,0,0.1);
+
+    }
+
+    &__box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border: 1px solid rgba(0,0,0,.3);
+      border-radius: 10px;
+      padding-top: 56px;
+      padding-bottom: 32px;
+      max-height: 70vh;
+    }
+
+    &__box a {
+      text-decoration: underline;
+    }
+
+  }
+
+  &-btn-close {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 16px;
+    right: 16px;
+  }
+
+  &-btn-close img {
+    height: 100%;
+    width: 100%;
+  }
+
+
+  &-title {
+    font-size: $h4;
+    line-height: 1.22;
+    color: $aquamarine;
+  }
+
+  &-text {
+    overflow-x: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  &-text p {
+    line-height: 1.22;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+

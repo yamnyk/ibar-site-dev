@@ -1,0 +1,62 @@
+.learning-process {
+  margin-top: 80px;
+  background:
+  url("../img/learning/learning_graph_element.png") no-repeat,
+  url("../img/learning/learning_graph_element.png") no-repeat,
+  linear-gradient(90deg,
+    rgb(128, 149, 195) 0%,
+    rgba(57,89,162,1) 15%,
+    rgba(57,89,162,1) 85%,
+    rgb(128, 149, 195) 100%) no-repeat;
+  background-size: 60% 50%, 60% 50%, auto 100%;
+  background-position: calc(100% + 180px) 0, calc(100% + 180px) 100%, 20% bottom;
+
+  &_title{
+    font-size: $h3;
+    color: white;
+    padding: 37px 0 20px;
+  }
+  &_subtitle{
+    font-size: 28px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  &_text{
+    font-size: $p3;
+    color: white;
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+  &_text-block-icons{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    &_icons{
+      width: 64px;
+    }
+
+  }
+  &_text-block{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+    &_bullet{
+
+    }
+    &_text{
+      padding-left: 10px;
+      color: white;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+  }
+  &_block-img{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    & img{
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}

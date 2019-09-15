@@ -1,5 +1,116 @@
 /******** COMMON STYLES FOR ALL DOCUMENT ********/
-.container {
-  width: 1024px;
-  margin: 0 auto;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic');
+@import "reset";
+@import "variables";
+@import "font-faces";
+
+html {
+  font-family: 'Montserrat Light', sans-serif;
+  scroll-behavior: smooth;
 }
+
+*, *:before, *:after {
+  font-family: 'Montserrat Light', sans-serif;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  display: none;
+}
+.txt-bold {
+  font-weight: bold !important;
+  color: black;
+}
+
+
+a { text-decoration: none; }
+
+.container {
+  padding: 0 20px;
+}
+
+.btn-big {
+  font-size: $btnTextBig;
+  @include button('big', $aquamarine)
+}
+.btn-extra {
+  font-size: $btnTextBig;
+  @include button('extralarge', $aquamarine)
+}
+.btn-small {
+  font-size: $btnTextSmall;
+  @include button('small', $lightBlue)
+}
+
+.bnt-aquamarine {
+  background-color: $aquamarine;
+}
+
+.btn-lightBlue {
+  background-color: $lightBlue;
+}
+
+/**** C L A S S  .container ****/
+@media screen and (min-width: $screen320) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: $screen580) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: $screen760) {
+  .container {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (min-width: $screen980) {
+  .container {
+    padding: 0 80px;
+  }
+}
+
+@media screen and (min-width: $screen1024) {
+  .container {
+    max-width: 1024px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+/**** M O B I L E   F I R S T ****/
+@import "header/1-0-header";
+@import "header/1-1-home";
+@import "about/2-about";
+@import "benefits/3-benefits";
+@import "programs/programs";
+@import "program/program";
+@import "admission/admission";
+@import "learning-process/learning-process";
+@import "stages/stages";
+@import "app-form/appFrom";
+@import "faq/faq";
+@import "footer/footer";
+
+
+/**** M E D I A  Q U E R I E S ****/
+@import "header/1-0-header_media";
+@import "header/1-1-home_media";
+@import "about/2-about_media";
+@import "benefits/3-benefits_media";
+@import "programs/programs__media";
+@import "program/program_media";
+@import "admission/admission_media";
+@import "learning-process/learning-process__media";
+@import "stages/stages__media";
+@import "app-form/appForm_media";
+@import "faq/faq__media";
+@import "footer/footer__media";
+

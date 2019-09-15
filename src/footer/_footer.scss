@@ -1,0 +1,74 @@
+#contacts > .container {
+  width: 100%;
+  margin: 0 auto;
+}
+.footer-wrapper{
+  padding-bottom: 35px;
+}
+.footer {
+  line-height: 1.25;
+  background-color: $darkBlue;
+  &__address-block-first{
+    width: 70%;
+    padding-bottom: 20px;
+    padding-top: 25px;
+  }
+  &__address-block-second{
+    width: 70%;
+    padding-top: 25px;
+    & img {
+      width: 100%;
+    }
+  }
+  &__headline{
+    padding-top: 20px;
+    color: #ffffff;
+    font-size: $h3;
+    letter-spacing: 0.1em;
+  }
+
+  &__address_name{
+    color: #ffffff;
+    font-size: $p3;
+    letter-spacing: 0.1em;
+    padding-bottom: 25px;
+  }
+  &__address_first-line{
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0.07em;
+  }
+  &__address_second-line{
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0.07em;
+  }
+  &__address_phone{
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0.07em;
+    text-decoration: none;
+
+    &:link {
+      color: #fff;
+    }
+  }
+  &__address_mail{
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0.07em;
+  }
+  &__social-button{
+    width: 100%;
+    margin-top: 10px;
+    &_link{
+      cursor: pointer;
+        }
+    &_facebook{
+      margin-right: 19px;
+    }
+    &_vk{
+      margin-right: 19px;
+    }
+  }
+}

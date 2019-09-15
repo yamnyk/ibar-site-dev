@@ -1,0 +1,52 @@
+@media (min-width: $screen760) {
+  .program {
+    &.container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    &__wrap-module {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    &__module {
+      width: calc(100% / 2 + 15%);
+      &-title {
+        width: calc(100% / 2);
+        text-align: right;
+        position: absolute;
+        left: -300px;
+      }
+    }
+    &__show-more {
+      align-self: flex-end;
+      width: calc(100% / 2 + 15% + 31px);
+      justify-content: flex-start;
+      padding-top: 0;
+      &-btn {
+        order: -1;
+      }
+      &-text {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen1024) {
+  .program {
+    &__module {
+      width: calc(100% / 2 + 20%);
+      &-title {
+        width: calc(100% / 2 - 8%);
+        text-align: right;
+        position: absolute;
+        left: -330px;
+      }
+    }
+    &__show-more {
+      width: calc(100% / 2 + 20% + 32px);
+    }
+  }
+}

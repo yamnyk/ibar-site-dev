@@ -1,0 +1,57 @@
+@media (min-width: $screen580) {
+  .programs {
+    &__img-box {
+      & img {
+        height: 450px;
+      }
+    }
+  }
+}
+@media (min-width: $screen760) {
+  .programs {
+    &__title {
+      font-size: 52px;
+    }
+    .programs-wrapper-front{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+    &__img-box{
+
+      margin-bottom: 20px;
+      display: flex;
+      width: calc(100% / 2 - 10px);
+      & img{
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__main-block {
+      width: calc(100% / 2 - 10px);
+      &_title{
+        font-size: 32px;
+      }
+    }
+  }
+  .programs-wrapper-front{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+  .programs-wrapper-back{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (min-width: $screen1024) {
+  .programs {
+    &__title {
+      margin-left: 0;
+    }
+  }
+}

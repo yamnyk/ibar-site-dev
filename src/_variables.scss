@@ -1,0 +1,59 @@
+/***** COLORS *****/
+$darkBlue: #1b3e85;
+$lightBlue: #3959a2;
+$aquamarine: #00b5ad;
+$milk: #f7f7f7;
+
+/***** FONT_SIZES *****/
+$h1: 58px;
+$h2: 52px;
+$h3: 32px;
+$h4: 26px;
+$p1: 36px;
+$p2: 20px;
+$p3: 18px;
+$btnTextBig: 20px;
+$btnTextSmall: 16px;
+
+/***** SCREEN_SIZES *****/
+// 320 => 580 => 760 => 920 => 1024
+$screen320    : 320px;
+$screen520    : 520px;
+$screen580    : 580px;
+$screen760    : 760px;
+$screen980    : 980px;
+$screen1024   : 1024px;
+
+/***** NAVBAR_HEIGHT *****/
+$navbarHeight : 68px;
+
+/***** BTN_SIZES *****/
+@mixin button($size, $color) {
+  border-radius: 9px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  appearance: none;
+  
+  @if $size == 'extralarge' {
+    text-transform: uppercase;
+    padding: 20px 35px;
+    background-color: $color;
+  }
+  @if $size == 'big' {
+    padding: 20px 25px;
+    background-color: $color;
+  }
+  @if $size == 'small' {
+    padding: 10px 14px;
+    background-color: $color;
+  }
+}
+
+@mixin flexContainer($jc, $fd:row, $wrap:wrap) {
+  display: flex;
+  justify-content: $jc;
+  flex-direction: $fd;
+  flex-wrap: $wrap;
+}

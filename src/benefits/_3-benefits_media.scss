@@ -1,0 +1,71 @@
+@media (min-width: $screen980) {
+  .benefits {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background-image: url("../img/benefits/benefits_photo_1.png"),
+                      url("../img/benefits/benefits_graph_element.png"),
+                      linear-gradient(65deg, rgb(255, 255, 255) 0%, rgba(57,89,162,1) 45%, rgba(57,89,162,1) 100%);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: auto 65%, auto 100%, cover;
+    background-position: 20% bottom, left, center;
+
+    &-title {
+      font-size: $h2;
+      padding-bottom: 40px;
+    }
+
+    &-list {
+      padding-left: 50%;
+
+      &__item {
+        display: flex;
+        padding-bottom: 20px;
+
+        &-num {
+          font-size: 40px;
+          padding-right: 36px;
+          &_1{
+            font-size: 40px;
+            padding-right: 38px;
+          }
+        }
+
+        &-text {
+          font-size: $p2;
+          line-height: 1.22;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $screen1024) {
+  .benefits {
+    background-size: auto 70%, auto 100%, cover;
+    background-position: 20% bottom, left, center;
+  }
+}
+
+@media (min-width: 1216px) {
+  .benefits {
+    background-size: auto 80%, auto 100%, cover;
+    background-position: 20% bottom, left, center;
+  }
+}
+
+@media (min-width: 1408px) {
+  .benefits {
+    background-size: auto 85%, auto 100%, cover;
+    background-position: 25% bottom, left, center;
+  }
+}
+
+@media (min-width: 1600px) {
+  .benefits {
+    background-position: 35% bottom, left, center;
+  }
+}

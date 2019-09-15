@@ -1,0 +1,77 @@
+@media (min-width: $screen760) {
+  .app {
+    &-form {
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &__text {
+        &--half-width {
+          width: calc(100% / 2 - 10px);
+        }
+        &--full-width {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen980) {
+  .app {
+    &-form {
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &__text{
+        &--arrow {
+          width: calc(100% / 2 - 10px);
+          &:after {
+            top: 30px;
+          }
+        }
+        &:not(:nth-last-of-type(2)) {
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row;
+
+          & > .app-form__text-field {
+            width: 70%;
+            margin-top: 0;
+          }
+
+          &--full-width {
+            justify-content: stretch;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+        }
+        &:last-of-type {
+          margin-top: 20px;
+        }
+      }
+    }
+    &-modal {
+      &__msg {
+        max-width: 640px;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen1024) {
+  .app {
+    &-wrapper {
+      background:
+              url("../img/appFrom/lines.png") no-repeat,
+              url("../img/appFrom/lines_inverted.png") no-repeat,
+              linear-gradient(90deg,
+                rgb(128, 149, 195) 0%,
+                rgba(57,89,162,1) 15%,
+                rgba(57,89,162,1) 85%,
+                rgb(128, 149, 195) 100%
+              );
+      background-size: 15% 100%, 15% 100%, auto 100%;
+      background-position: -100px 0, calc(100% + 100px) 0, 20% bottom;
+    }
+  }
+}

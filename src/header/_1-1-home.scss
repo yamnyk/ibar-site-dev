@@ -1,0 +1,91 @@
+.home {
+  height: 100vh;
+  //background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 65%),
+  //url("../img/header/Students_foto_main_banner@3x.png") center no-repeat;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 65%),
+  url("../img/header/banner.jpg") center no-repeat;
+  background-size: cover;
+  margin-bottom: $navbarHeight;
+  padding-bottom: 52px;
+
+  &--frontend {
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 65%),
+    url("../img/header/frontend/frontend-bg.jpg") -250px center no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+
+  &--backend {
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 65%),
+    url("../img/header/backend/backend-bg.jpg") calc(100% + 350px) center no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    color: white;
+    text-align: center;
+  }
+
+  &-info {
+    background-color: $lightBlue;
+    padding: 25px 0 20px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__item {
+      //width: calc(100% / 4 - 10px);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: $milk;
+      margin-bottom: 30px;
+
+      & img {
+        height: 75px;
+      }
+
+      &-title {
+        font-size: $p1;
+        margin-top: 16px;
+      }
+
+      &-subtitle {
+        font-size: $p3;
+        margin-top: 8px;
+        text-align: center;
+      }
+    }
+  }
+
+  &-title {
+    font-size: $p1;
+    font-weight: 600;
+    margin-bottom: 40px;
+    line-height: 1.25;
+  }
+
+  &-subtitle {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  & .application {
+    display: none;
+  }
+
+  &-mb70 {
+    margin-bottom: 70px;
+  }
+}
+

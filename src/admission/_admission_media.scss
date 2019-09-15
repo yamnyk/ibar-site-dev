@@ -1,0 +1,47 @@
+@media (min-width: $screen760) {
+  .admission {
+    padding: 70px 0 0;
+    &__title {
+      font-size: $h2;
+    }
+    &__skills {
+      &-list {
+        padding-left: 50px;
+        margin-bottom: 70px;
+        & li {
+          font-size: $p2;
+          &::before {
+            //left: -25px;
+            font-size: $h2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen980) {
+  .admission {
+    background:
+            url("../img/appFrom/lines.png") no-repeat,
+            url("../img/appFrom/lines_inverted.png") no-repeat,
+            linear-gradient(90deg,
+                    rgb(128, 149, 195) 0%,
+                    rgba(57,89,162,1) 15%,
+                    rgba(57,89,162,1) 85%,
+                    rgb(128, 149, 195) 100%
+            );
+    background-size: auto 100%, auto 100%, auto 100%;
+    background-position: -350px 0, calc(100% + 300px) 0, 20% bottom;
+    &__skills {
+      &-list {
+        width: calc(100% / 2 - 20px);
+      }
+      &-img {
+        display: flex;
+        align-items: flex-end;
+        width: calc(100% / 2 - 20px);
+      }
+    }
+  }
+}

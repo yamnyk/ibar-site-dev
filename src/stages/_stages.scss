@@ -1,0 +1,40 @@
+.stages{
+  width: 100%;
+
+  & > .container {
+    padding: 0;
+  }
+  &__title{
+    color: #000000;
+    font-size: $h3;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  &__block{
+    padding: 0 20px 25px;
+    margin-bottom: 20px;
+    background-color: $milk;
+    &_main-block{
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid #00b5ad;
+      &_text{
+        font-size: 18px;
+        line-height: 1.22;
+        margin-top: 15px;
+      }
+      &_title{
+        color: $darkBlue;
+        font-size: 20px;
+        text-align: left;
+        padding-top: 5px;
+        &_number{
+          padding: 20px 30px 20px 20px;
+          color: $darkBlue;
+          font-size: 42px;
+        }
+      }
+    }
+  }
+}

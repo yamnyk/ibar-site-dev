@@ -1,0 +1,64 @@
+@media (min-width: $screen760) {
+  .learning-process {
+    background:
+            url("../img/learning/learning_graph_element.png") no-repeat,
+            linear-gradient(90deg,
+                    rgb(128, 149, 195) 0%,
+                    rgba(57,89,162,1) 15%,
+                    rgba(57,89,162,1) 85%,
+                    rgb(128, 149, 195) 100%) no-repeat;
+    background-size: auto 100%, auto 100%;
+    background-position: calc(100% + 500px) 100%, 20% bottom;
+    .learning-wrapper {
+      display: flex;
+      & img {
+        align-self: center;
+      }
+    }
+    &_text-block-icons {
+
+      &_icons {
+        width: 104px;
+      }
+    }
+      &_block-img {
+        width: 80%;
+      }
+    }
+  }
+
+@media (min-width: $screen580) {
+  .learning-process {
+    background:
+            url("../img/learning/learning_graph_element.png") no-repeat,
+            linear-gradient(90deg,
+                    rgb(128, 149, 195) 0%,
+                    rgba(57,89,162,1) 15%,
+                    rgba(57,89,162,1) 85%,
+                    rgb(128, 149, 195) 100%) no-repeat;
+    background-size: auto 100%, auto 100%;
+    background-position: calc(100% + 450px) 100%, 20% bottom;
+    &_text-block-icons {
+
+      &_icons {
+        width: 104px;
+      }
+    }
+    &_block-img {
+      width: 80%;
+    }
+  }
+}
+@media (min-width: $screen520) {
+  .learning-process {
+    background: url("../img/learning/learning_graph_element.png") no-repeat,
+    linear-gradient(90deg,
+                    rgb(128, 149, 195) 0%,
+                    rgba(57, 89, 162, 1) 15%,
+                    rgba(57, 89, 162, 1) 85%,
+                    rgb(128, 149, 195) 100%) no-repeat;
+    background-size: auto 100%, auto 100%;
+    background-position: calc(100% + 500px) 100%, 20% bottom;
+
+  }
+}

@@ -1,0 +1,47 @@
+.faq{
+  margin-bottom: 40px;
+  &__title{
+    color: #000000;
+    font-size: $h3;
+    padding: 40px 20px 10px 0;
+    border-bottom: 2px solid $aquamarine;
+    }
+}
+.accordion-item {
+  border-bottom: 2px solid $aquamarine;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.accordion-item-header {
+  position: relative;
+  cursor: pointer;
+  height: 55px;
+  font-size: 16px;
+  padding-right: 30px;
+}
+.accordion-item-header img{
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.accordion-item-content {
+  font-size: 18px;
+  transition: opacity .4s ease;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  border-top: 2px solid $aquamarine;
+}
+
+.accordion-item.show .accordion-item-content {
+  padding: 10px 0;
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+}
+
+.accordion-item.show .accordion-item-header {
+
+}

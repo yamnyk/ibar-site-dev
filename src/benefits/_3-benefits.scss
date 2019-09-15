@@ -1,0 +1,38 @@
+.benefits {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, rgb(128, 149, 195) 0%, rgba(57,89,162,1) 30%, rgba(57,89,162,1) 100%);
+
+  &-title {
+    font-size: $h3;
+    padding-bottom: 20px;
+  }
+
+  &-list {
+
+    &__item {
+      display: flex;
+      padding-bottom: 20px;
+
+      &-num {
+        font-size: $h3;
+        padding-right: 10px;
+        &_1{
+          font-size: $h3;
+          padding-right: 11px;
+        }
+      }
+      &-text {
+        font-size: $p3;
+        line-height: 1.22;
+      }
+    }
+  }
+
+  & span {
+    font-weight: 300;
+  }
+
+}

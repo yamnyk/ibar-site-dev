@@ -1,0 +1,108 @@
+@media (min-width: 360px) {
+  .navbar {
+    &-logo img {
+    }
+  }
+}
+
+@media (min-width: $screen580) {
+  .navbar {
+    &-logo img {
+      width: auto;
+      height: 40px;
+    }
+    &-menu {
+      & .btn-small {
+        transform: none;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen980) {
+  .navbar {
+
+    &__content {
+    }
+
+    &-logo {
+    }
+
+    &-logo img {
+    }
+
+    &__menu {
+      font-size: 14px;
+
+      &-wrapper {
+        position: static;
+        flex-direction: row;
+        padding: 0;
+        background-color: transparent;
+
+        & a {
+          color: white;
+          padding: 4px 0;
+          margin: 6px;
+          border-bottom: 2px solid transparent;
+        }
+
+        & > a:hover {
+          color: white;
+          border-bottom-color: white;
+        }
+
+      }
+
+    }
+
+    &__submenu {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      & > a:hover {
+        color: white;
+      }
+
+      &-wrapper {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        font-size: 14px;
+        background-color: white;
+        padding: 4px 16px 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 32px;
+      }
+
+      &-wrapper a {
+        padding: 8px 0 4px;
+        width: auto;
+        color: black;
+        border-bottom: 1px solid $aquamarine;
+      }
+
+    }
+
+    &__submenu:hover .navbar__submenu-wrapper {
+      display: flex;
+    }
+
+    &__icon {
+      display: none;
+    }
+
+  }
+
+}
+
+@media (min-width: $screen1024) {
+  .navbar {
+    &__menu {
+      font-size: inherit;
+    }
+  }
+}

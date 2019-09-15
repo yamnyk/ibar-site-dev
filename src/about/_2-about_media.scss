@@ -1,0 +1,134 @@
+//*** about ***//
+@media (min-width: $screen580) {
+  .about {
+
+    &-item {
+
+      &__img {
+        height: 100%;
+      }
+
+      &__article {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+      &__image-box {
+        height: 500px;
+        object-fit: cover;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+
+    &-sponsors {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+}
+
+@media (min-width: $screen760) {
+  .about {
+
+    &-item {
+
+      &__article {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+
+      &__image-box {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+    }
+
+    &-sponsors {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+}
+
+@media (min-width: $screen980) {
+  .about {
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 80px;
+      padding-right: 80px;
+
+      &__article {
+        width: calc(100% / 2 - 10px);
+        padding: 28px;
+        &-title {
+          font-size: $h2;
+        }
+      }
+
+      .about-item--reverse-order &__article {
+        order: 2;
+      }
+
+      &__image-box {
+        width: calc(100% / 2 - 10px);
+        height: auto;
+        padding: 0;
+      }
+
+      .about-item--reverse-order &__image-box {
+        order: 1;
+      }
+
+      &__image {
+        height: 100%;
+      }
+    }
+
+    &-sponsors {
+      padding-top: 15px;
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    &--frontend {
+      width: 100%;
+      margin: 75px 0;
+      padding: 75px 0 55px;
+    }
+  }
+
+}
+
+@media (min-width: $screen1024) {
+  .about {
+
+    &-item {
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    &-sponsors {
+      padding-left: 0;
+      padding-right: 0;
+      width: 1024px;
+      margin: 0 auto;
+    }
+
+  }
+}
+
+//*** modal ***//
+@media (min-width: $screen1024) {
+  .modal {
+    &-window {
+
+      &__box {
+        padding: 72px 64px 48px;
+      }
+    }
+  }
+}
