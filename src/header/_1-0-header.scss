@@ -49,6 +49,7 @@
       transition: transform 250ms ease-in-out; ;
 
       & a {
+        display: block;
         padding: 14px 0 6px;
         letter-spacing: 1px;
         border-bottom: 1px solid $aquamarine;
