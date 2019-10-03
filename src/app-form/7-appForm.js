@@ -113,29 +113,29 @@ The IBA Tech Academy Team`,
       default:
         message = responseMessages.az;
     }
-    // fetch("/email", {
-    //   method: 'POST',
-    //   headers: {
-    //     "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-    //   },
-    //   body: `sendTo=${email}&message=${message}`
-    // }).then((res) => {
-    //   fetch("/email", {
-    //     method: 'POST',
-    //     headers: {
-    //       "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-    //     },
-    //     body: `sendTo=apply@ibatech.az&message=${applicationCopy}`
-    //   })
-    // }).then((res) => {
-
+    fetch("/email", {
+      method: 'POST',
+      headers: {
+        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      body: `sendTo=${email}&message=${message}`
+    }).then((res) => {
+      fetch("/email", {
+        method: 'POST',
+        headers: {
+          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        body: `sendTo=apply@ibatech.az&message=${applicationCopy}`
+      })
+    }).then((res) => {
       const modal = document.querySelector('.app-modal');
       modal.style.display = 'flex';
 
       document.querySelector('.app-modal__msg > .btn-extra').onclick = (e) => {
         document.querySelector('.app-modal').style.display = 'none';
-    // }, (error) => {
-    //   console.dir(error)
-    // });
+      }
+    }, (error) => {
+      console.dir(error)
+    });
   })
 });
