@@ -26,6 +26,7 @@ function manageNavLinks() {
     const nav = document.querySelector('.navbar__menu-wrapper');
     const navHandle = (e) => {
       e.preventDefault();
+      debugger
       if(e.target.hash === '#programs' || e.target.hash === '#stages' || e.target.hash === '#about') {
         const language = localStorage.getItem('lang') || 'az';
         switch (localStorage.getItem('lang')) {
@@ -43,7 +44,7 @@ function manageNavLinks() {
             window.location.assign(`${document.location.origin}/${e.target.hash}`);
             break;
         }
-      } else if(e.target.parentElement.classList.contains('navbar__submenu-wrapper')) {
+      } else if(e.target.parentElement.tagName === 'LI') {
         window.location.assign(e.target.href);
       } else {
         window.scroll({
